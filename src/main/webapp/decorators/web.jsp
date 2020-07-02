@@ -24,6 +24,9 @@
 	<dec:head />
 	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/nhshop.css">
 	<link rel="shortcut icon" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
+	<!-- slick slide -->
+	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
+	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick-theme.css">
 </head>
 <body>
 <!-- header -->
@@ -116,7 +119,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=189392698895180&autoLogAppEvents=1"></script>
 
 <%--Chat mess--%>
-
+<div class="container-fluid">
 <!-- header  -->
 <div class="header" role="list">
 	<div class="headinfo" role="listitem">
@@ -146,30 +149,73 @@
 		</sec:authorize>
 
 	</div>
-	<div class="headmenu" role="listitem">
-		<div class="headmenu_cl1" role="listitem">
-			NBShop
-		</div>
-		<div class="headmenu_cl2" role="list">
-			<ul class="menu_list" role="list">
+	<div class="row" style="margin-left: 0px; margin-right: 0px;">
+                <!-- <div class="headmenu"> -->
+                <div class="col-xl-3 col-lg-3 headmenu_cl1" role="listitem">
+                    NBShop
+                </div>
+                <div class="col-xl-6 col-lg-6 headmenu_cl2" role="list">
+                    <ul class="menu_list" role="list">
 
 			</ul>
 		</div>
-		<div class="headmenu_cl3" role="form">
-			<form class="search" action="/search" role="search">
-				<div class="input-group">
-					<input id="input1" type="text" placeholder="Search" name="keyword">
-					<div class="input-group-appen">
-						<span class="fa fa-search myis"></span>
-					</div>
-					<!-- <button><span class="fa fa-search input-group-addon"></span></button> -->
-				</div>
+		<div class="col-xl-3 col-lg-3 headmenu_cl3 " role="form">
+                    <div class="input-group mycusinput-group">
+                        <input id="showinput" type="text" class="form-control" placeholder="Search"
+                            style="height: 100%;">
+                        <div class="input-group-append">
+                            <button class="btn btn-success mybutton-search" type="submit"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- menu thu gon  -->
+            <div class="menuthugon">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <!-- <a href="#" class="loginclick logintextsc1">Login1</a>
+                    <div class="dropdown-menu hidemydropdown">
+                        <a href="#" class="dropdown-item">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Logout</a>
+                    </div> -->
+                    <div id="accordion">
+                        <div class="acc" style="background-color: black;">
+                            <div class="acc-header">
+                                <a class="acc-link" data-toggle="collapse" href="#collapseOne">Login</a>
+                            </div>
+                            <div id="collapseOne" class="collapse" data-parent="#accordion" style="display: none;">
+                                <div class="acc-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="background-color: black;"><a
+                                                href="">Profile</a> </li>
+                                        <li class="list-group-item" style="background-color: black;"><a
+                                                href="">Logout</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-			</form>
-		</div>
-	</div>
+                    </div>
+                    <a href="#">Giỏ hàng</a>
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Join us</a>
+                    <a href="#">Help</a>
+                </div>
 
-</div>
+                <button class="openbtn" onclick="openNav()">☰</button>
+            </div>
+            <script>
+                function openNav() {
+                    document.getElementById("mySidepanel").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidepanel").style.width = "0";
+                }
+            </script>
+        </div>
 <!-- login  -->
 <div class="mylogform modal-open">
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display: none;"
@@ -326,12 +372,105 @@
 
 
 <%--	<!-- Footer -->--%>
+<!-- footer  -->
+        <div class="row footer" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col">
+                <h5 style="color: black;">About NBShop</h5>
+                <ul style="list-style: none;">
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Ứng tuyển việc làm</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h5 style="color: black;">Get help</h5>
+                <ul style="list-style: none;">
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>
+                    <li><a href="" style="color: aliceblue; text-decoration: none;">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col"></div>
+            <div class="col" style="margin: auto; text-align: center;">
+                <ul style="list-style: none; margin: auto; text-align: left;">
+                    <li><a href=""><i class="fa fa-facebook-square text-primary p-2"
+                                style="font-size: xx-large;"></i></a>
+                    </li>
+                    <li><a href=""><i class="fa fa-twitter-square text-info p-2" style="font-size: xx-large;"></i></a>
+                    </li>
+                    <li><a href=""><i class="fa fa-youtube-square text-danger p-2" style="font-size: xx-large;"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
 	<script src="${pageContext.request.contextPath}/template/js/common/axios.js"></script>
 	<link href="<c:url value='/template/css/font-awesome.min.css' />"
 		  rel="stylesheet" type="text/css">
 	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
+	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
+	<script type="text/javascript" src="/template/slick/slick.min.js"></script>
 	<script src="<c:url value='/template/js/common/bootstrap.min.js' />"></script>
 	<script src="${pageContext.request.contextPath}/template/js/common/popper.js"></script>
 	<script src="/template/js/page/web.js"></script>
+	<script>
+        $('.main-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+    </script>
+    <script>
+        if ($(window).width() < 1024) {
+            $(".mybutton-search").click(function () {
+                $("#showinput").show();
+                $(".headmenu_cl1").hide();
+                $(".headmenu_cl3").css("width", "100%");
+            })
+            $(".header").mouseleave(function () {
+                $("#showinput").hide();
+                $(".headmenu_cl1").show();
+                $(".headmenu_cl3").css("width", "fit-content");
+            })
+        }
+    </script>
+    <script>
+        console.log($(".acc-link").text());
+        if ($(".acc-link").text() != "Login") {
+            $("#collapseOne").show();
+        }
+    </script>
+    <script>
+        $('.product-slider').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
 </body>
 </html>

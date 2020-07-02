@@ -1,0 +1,529 @@
+
+body{
+    background-color: aliceblue;
+    height: 100%;
+    height: 1000px;
+    font-family: cursive;
+}
+
+/*div block 1*/
+.header{
+    background-color: rgb(163, 153, 16);
+    border-bottom: 0.5px groove lavender;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    z-index: 9999999;
+}
+.headinfo{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.5px groove lavender;
+}
+.headinfo_left{
+    position: absolute;
+    left: 30px;
+    top:6px;
+}
+.headinfo_right{
+    position: absolute;
+    right: 30px;
+    top:6px;
+}
+.headinfo .text_{
+    color: aliceblue;
+    font-family: segoe ui light;
+    font-size: 13px;
+}
+.headinfo a.icon_color{
+    color: aliceblue;
+}
+.headinfo .position_left{
+    margin-left: 30px;
+}
+.headinfo .position_right{
+    margin-left: 100px;
+}
+.headinfo a{
+    margin: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.headinfo a:hover{
+    color:rgb(211, 210, 210);
+}
+.headinfo a.icon_color:hover{
+    color:rgb(238, 14, 14);
+}
+.hidemydropdown{
+    display: none;
+}
+a.dropdown-item{
+    width: auto;
+    color: rgb(163, 153, 16);
+}
+a.dropdown-item:hover{
+    background-color: rgb(163, 153, 16);
+    color: aliceblue;
+}
+/*div block 2*/
+.headmenu{
+    display: flex;
+    width: 100%;
+}
+.headmenu .headmenu_cl1{
+    width: 20%;
+    color: aliceblue;
+    font-weight: bolder;
+    text-align: center;
+    margin-top:10px;
+    font-size: 30px;
+}
+.headmenu .headmenu_cl2{
+    width: 60%;
+}
+.headmenu .headmenu_cl3{
+    width: 20%;
+}
+.content_box{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+/* .test_text{
+    /*background:linear-gradient(rgba(92, 27, 158, 0.829),white ) ;
+    background-image: url(https://i.pinimg.com/originals/62/e7/a4/62e7a4dfce7d21f4a784be14de9ff3b2.gif);
+    -webkit-background-clip: text;
+    font-size: 150px;
+    color: transparent;
+    text-align: center;
+    font-family: cursive;
+} */
+/*menu*/
+.headmenu_cl2{
+    text-align: center;
+}
+.headmenu_cl2 ul.menu_list{
+    margin-top: 20px;
+}
+.headmenu_cl2 li.menu_item{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*.headmenu_cl2 li.menu_item:hover, li.menu_item:active{
+    border-bottom: 2px solid aliceblue;
+}*/
+.headmenu_cl2 a{
+    font-family: monospace;
+    font-size: 25px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.headmenu_cl3{
+    margin-top: 10px;
+}
+/*dropdown menu*/
+ul.menu_list{
+    position: relative;
+    margin-bottom: 0px;
+}
+.headmenu_cl2 .list_down{
+    display: inline-block;
+    position: relative;
+}
+.headmenu_cl2 .dropdown_content{
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: rgb(163, 153, 16);
+    z-index: 99;
+}
+.headmenu_cl2 .dropdown_content a{
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: x-large;
+}
+
+.list_down:hover .dropdown_content{
+    display: block;
+    min-width: max-content;
+    padding-top: 0px;
+    text-align: left;
+    opacity: 0.95;
+
+}
+
+/*thanh search*/
+.headmenu_cl3 {
+    margin-top: 20px;
+}
+.headmenu_cl3 button{
+    width: 29px;
+    height: 29px;
+    border: hidden;
+    background: transparent;
+    color: aliceblue;
+}
+.headmenu_cl3 button:active{
+    border-style: hidden;
+}
+.headmenu_cl3 input{
+    float: left;
+    border: 0.1px groove rgba(92, 27, 158, 0.829);
+    border-radius: 10px;
+}
+.headmenu_cl3 input:active{
+    border: 0.1px groove rgba(92, 27, 158, 0.829);
+    border-radius: 10px;
+}
+span.myis{
+    background-color: rgb(255, 255, 255);
+    margin-left: -23px;
+}
+/*slide*/
+
+.my_slide{
+    height: 50px;
+    background-color: rgba(239, 230, 245, 0.829);
+    text-align: center;
+    opacity: 0.8;
+    position: block;
+    margin-top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+a.carousel-control-prev,a.carousel-control-next,ol._hidden{
+    visibility: hidden;
+}
+.content_box{
+    width: 40%;
+    text-align: center;
+    margin-left: 400px;
+}
+/*video intro gucci*/
+#video_intro{
+    width: 450px;
+    height: 350px;
+    z-index: -1;
+}
+.shop_content{
+    text-align: center;
+    width: 750px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+}
+.shop_content .left{
+    width: 450px;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid rgb(235, 232, 232);
+}
+.shop_content .right {
+    width: 30%;
+    background-color: rgb(236, 221, 12);
+    border: 2px double rgb(168, 162, 162);
+    border-radius: 10%;
+    height: 50px;
+    width: 100px;
+    transition: height 3s, width 2s;
+}
+.shop_content .right_top p{
+    margin-top: 10px;
+}
+.shop_content .right:hover{
+    height: 350px;
+    width: 275px;
+}
+.shop_content .right_bot{
+    display: none;
+    background-color: lavender;
+    margin-top: -15px;
+    height: 0px;
+    opacity: 0;
+    transition: height 2s, opacity 4s;
+}
+.shop_content .right:hover .right_bot{
+    display: block;
+}
+.shop_content .right_bot:hover{
+    height: fit-content;
+    opacity: 1;
+}
+/*
+.shop_content .right blockquote{
+    display: none;
+    opacity: 0;
+    transition: opacity 3s;
+    transition-delay: 1s;
+}
+.shop_content .right_top:hover{
+    height: 500px;
+}
+.shop_content .right:hover blockquote{
+    display: block;
+
+}
+.shop_content .right:hover blockquote:hover{
+    opacity: 1;
+}*/
+h5.tieu_de{
+    font-size: 20px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+i.mystar{
+    margin-top: 25px;
+    margin-left: 180px;
+}
+a.shopnow{
+    background-color: lavender;
+    text-decoration: none;
+    z-index: 1;
+    font-size: 20px;
+    width: fit-content;
+    animation-name: shopnoweffect;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    opacity: 0.7;
+}
+@keyframes shopnoweffect{
+    25%{color: red;}
+    50%{color: yellow;}
+    75%{color: blue;}
+    100%{color: green;}
+}
+
+
+/*top product  */
+.product_box{
+    width: 1000px;
+}
+._12sanpham{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 150px;
+    margin-right: 100px;
+}
+._1sanpham{
+    width: 300px;
+    /* height: 680px;  */
+    margin: 20px;
+}
+img.anhsanpham{
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    margin-bottom: 10px;
+    transition: 0.5;
+}
+img.anhmau{
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    transition: 0.5;
+}
+._1sanpham img.anhsanpham:hover{
+    width: 310px;
+    height: 410px;
+    margin-bottom: 0px;
+}
+._1sanpham img.anhmau:hover{
+    filter: sepia(300%);
+}
+/*footer*/
+.footer{
+    z-index: 2;
+    width: 100%;
+    margin-top: 40px;
+    background-color: rgb(163, 153, 16);
+    opacity: 0.8;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .cot1{
+    width: 300px;
+}
+.footer .cot2{
+    width: 500px;
+}
+.footer .cot3{
+    width: 300px;
+}
+
+i{
+    float: left;
+}
+
+/* loginform */
+.mylogform{
+    z-index: -999999999999999999999999;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.containerform{
+    position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+    margin: auto;
+}
+.input-field, form .button{
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+.input-field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 19px;
+    transition: .4s;
+}
+input:focus{
+    border: 1px solid rgb(123, 163, 11);
+}
+.input-field label, span.show{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-field label{
+    left: 15px;
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: .4s;
+}
+span.show{
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+    visibility: visible;
+}
+input:focus ~ label,
+input:not([value=""])[value] ~ label{
+    transform: translateY(-40px);
+    background: white;
+    font-size: 16px;
+    color: #f10c77;
+}
+.chudep{
+    background-image: -webkit-linear-gradient(#da1278,#0be192,#e812a6);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
+    font-size: xx-large;
+}
+form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
+}
+.button .inner{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    transition: all .4s;
+    background: -webkit-linear-gradient(right,#da1278,#ef0f77,#0be192,#e812a6);
+}
+.button:hover .inner{
+    left: 0;
+}
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.containerform .auth{
+    margin: 30px;
+    font-size: 19px;
+    color: grey;
+}
+#login_with, #signup{
+    text-align: center;
+}
+.links{
+    display: flex;
+    cursor: pointer;
+}
+.facebook, .google{
+    height: 40px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin: 0 10px;
+    transition: .4s;
+}
+.facebook:hover{
+    border: 1px solid #4267B2;
+}
+.google:hover{
+    border: 1px solid #dd4b39;
+}
+.facebook i, .facebook span{
+    color: #4267B2;
+}
+.google i, .google span{
+    color: #dd4b39;
+}
+.links i{
+    font-size: 23px;
+    line-height: 40px;
+    margin-left: 15px;
+}
+.links span{
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+.signup{
+    margin-top: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.signup a{
+    color: #3498db;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+.chudau{
+    text-align: center;
+    margin-top: -48px;
+}

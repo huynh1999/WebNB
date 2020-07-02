@@ -1,0 +1,11 @@
+.tapanh{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.motanh {
+    width: 20%;
+}
+.motanh img{
+    width: 90%;
+}

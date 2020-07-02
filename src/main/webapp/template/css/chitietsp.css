@@ -1,0 +1,25 @@
+.anhmieuta{
+    display: flex;
+    flex-wrap: wrap;
+}
+.anhmieuta img{
+    width: 50%;
+    padding: 8px;
+    /* margin-bottom: 4px; */
+}
+p.tensp{
+    font-weight: 500;
+    font-size: larger;
+}
+.form-check{
+    width: 30%;
+}
+button.btnshop{
+    border-radius: 30px;
+}
+.btmua{
+    width: fit-content;
+}
+.maunoi{
+	color: red;
+}

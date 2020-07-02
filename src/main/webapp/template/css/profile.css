@@ -1,0 +1,39 @@
+body {
+    position: relative;
+}
+
+#myScrollspy {
+	position: fixed;
+    margin-top: 100px;
+}
+
+.item {
+    margin: 10px;
+}
+
+.myctwrap {
+    flex-wrap: wrap;
+}
+
+.myct {
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+img.thugonvua {
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(113, 150, 14);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #e40d66;
+}

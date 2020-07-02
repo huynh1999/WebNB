@@ -1,0 +1,41 @@
+select.mycustomselect{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: aliceblue;
+}
+select.mycustomselect:click{
+    border: none;
+    background-color: aliceblue;
+}
+label.lbsize{
+    margin-bottom: 0px;
+}
+.mycustomformgroup{
+    display: flex;
+    width: 100px;
+}
+.mycustomformgroup_c1{
+    width: 50px;
+    margin: auto;
+}
+.mycustomformgroup_c2{
+    width: 50px;
+}
+img.thugon{
+    width: 150px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.botron{
+    margin: auto;
+    border-top: 1px solid gray ;
+    border-bottom: 1px solid gray;
+}
+.textcenter{
+    text-align: center;
+}
+#dathang{
+	
+}

@@ -1,0 +1,32 @@
+i.myhome{
+    margin-left: 100px;
+    font-size: x-large;
+}
+i.myarrow{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h5.tieu_de{
+    margin-left: 20px;
+}
+.text-xs-center{
+    margin: auto;
+    width: fit-content;
+}
+.leftbox{
+    position: fixed;
+    left: 0;
+    top: 200px;
+    vertical-align: middle;
+    margin: auto;
+    color: rgb(171, 182, 19);
+    border: 1px rgb(241, 233, 233) solid;
+    background-color: rgb(245, 244, 223);
+    padding: 20px;
+    display: none;
+    transition: 0.8;
+}
+.leftbox a{
+    color: rgb(171, 182, 19);
+    text-decoration: none;
+}

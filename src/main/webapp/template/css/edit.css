@@ -1,0 +1,23 @@
+.myanhnho{
+    display: flex;
+    flex-wrap: wrap;
+}
+.anhnhothanhphan{
+    width: 100px;
+    position: relative;
+    margin: 2px;
+}
+.anhnhothanhphan img{
+    width: 100%;
+}
+.anhnhothanhphan button{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: transparent;
+    color: red;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}

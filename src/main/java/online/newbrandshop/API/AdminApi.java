@@ -15,6 +15,8 @@ import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -40,7 +42,7 @@ public class AdminApi {
     NameTypeRepository nameTypeRepository;
 
 
-    @GetMapping("/getCategory")
+    @GetMapping(value = "/getCategory",produces = "application/json;charset=UTF-8")
     public String GetCategory()
     {
         List<CategoryEntity>categoryEntities=categoryRepository.findAll();
@@ -50,7 +52,7 @@ public class AdminApi {
         }
         return rebody.toString();
     }
-    @GetMapping("/getCategory/{id}")
+    @GetMapping(value = "/getCategory/{id}",produces = "application/json;charset=UTF-8")
     public String GetCategoryProduct(@PathVariable("id")long id) throws JsonProcessingException {
         ProductEntity entity=productRepository.findById(id);
         List<CategoryEntity>categoryEntities=entity.getListCategories();
@@ -73,7 +75,7 @@ public class AdminApi {
         productRepository.save(entity);
         return "ok";
     }
-    @PostMapping("/addType")
+    @PostMapping(value = "/addType",produces = "application/json;charset=UTF-8")
     public String AddType(@RequestBody JsonNode node)
     {
         try {
@@ -87,7 +89,7 @@ public class AdminApi {
         return "ok";
 
     }
-    @PostMapping("/addCategoryCode")
+    @PostMapping(value = "/addCategoryCode",produces = "application/json;charset=UTF-8")
     public String AddCategoryCode(@RequestBody JsonNode node)
     {
         try {
@@ -101,7 +103,7 @@ public class AdminApi {
         return "ok";
 
     }
-    @PostMapping("/addCategoryToType")
+    @PostMapping(value = "/addCategoryToType",produces = "application/json;charset=UTF-8")
     public String AddCategoryToType(@RequestBody JsonNode node)
     {
         try{
@@ -142,5 +144,38 @@ public class AdminApi {
         catch (Exception e){
             return "error";
         }
+    }
+    @GetMapping(value = "/getBillByStatus/{status}",produces = "application/json;charset=UTF-8")
+    public String GetBillByStatus(@PathVariable("status")int status) throws JsonProcessingException {
+        List<BillEntity>list=billRepository.findAllByStatus(status);
+        Collections.reverse(list);
+        return new ObjectMapper().writeValueAsString(list);
+    }
+    @GetMapping(value = "/getBillById/{id}",produces =  "application/json;charset=UTF-8")
+    public String getBillById(@PathVariable("id")long id) throws JsonProcessingException {
+        ObjectMapper mapper=new ObjectMapper();
+        JSONObject jsonObject=new JSONObject();
+        BillEntity billEntity=billRepository.findById(id);
+        return mapper.writeValueAsString(billEntity.getPayerEntity());
+    }
+    @PostMapping(value = "/setStatus")
+    public String setStatus(@RequestBody JsonNode node)
+    {
+        try{
+            BillEntity billEntity=billRepository.findById(node.get("id").asLong());
+            billEntity.setStatus(node.get("status").asInt());
+            billRepository.save(billEntity);
+            return "ok";
+        }
+        catch (Exception e){
+            return "error";
+        }
+    }
+    @GetMapping("/getAllImg")
+    public String getAllImg() throws JsonProcessingException {
+        List<ImageEntity>imageEntities=imageRepository.findAll();
+        ObjectMapper mapper=new ObjectMapper();
+        Collections.reverse(imageEntities);
+        return mapper.writeValueAsString(imageEntities);
     }
 }

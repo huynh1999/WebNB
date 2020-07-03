@@ -14,4 +14,6 @@ import java.util.List;
 public interface BillRepository extends JpaRepository<BillEntity, Long> {
     BillEntity findByBillName(String billName);
     List<BillEntity>findAllByCreatedBy(String createdBy);
+    List<BillEntity>findAllByStatus(int status);
+    BillEntity findById(Long id);
 }

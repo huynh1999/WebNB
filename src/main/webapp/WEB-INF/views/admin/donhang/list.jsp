@@ -1,6 +1,4 @@
 <%@include file="/common/taglib.jsp"%>
-<c:url var="APIurl" value="/api-admin-new"/>
-<c:url var ="NewURL" value="/admin-new"/>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
     pageEncoding="UTF-8"%>
 	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -30,9 +28,8 @@
                 <div class="row" style="display: flex; width: fit-content; justify-content: space-between;">
                 
                         <div class="col-2 ">
-                            <select class="form-control" name="categoryCode">
-                            	<option>Đã hủy</option>
-                            	<option>Đã giao</option>	
+                            <select id="statusCode" class="form-control" name="">
+
                             </select>
                         </div>
                         <div class="col-1 mycol2" style="text-align: left;">
@@ -56,34 +53,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>ma1</td>
-                                                    <td>huynh</td>
-                                                    <td>31/4/2020</td>
-                                                    <td>
-                                                        đã giao
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-                                                            title="Chi tiết hóa đơn" href=""><i
-                                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>ma2</td>
-                                                    <td>nghia</td>
-                                                    <td>31/4/2020</td>
-                                                    <td>
-                                                        đã hủy
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-                                                            title="Chi tiết hóa đơn" href=""><i
-                                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                         <ul class="pagination" id="pagination"></ul>
@@ -101,6 +71,11 @@
             </div>
         </form>
     </div>
+    <script>
+        window.onload=function () {
+            $.getScript("/template/js/admin/manageBill.js");
+        }
+    </script>
 	</body>
 
 	</html>

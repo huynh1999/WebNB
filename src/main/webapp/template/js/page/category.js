@@ -6,7 +6,7 @@ root=$("#box_item");
 var body=document.getElementsByTagName("body")[0];
 axios.get("/api/category/"+window.location.href.split("/").slice(-1)[0])
     .then(re=>{data=re.data;upload()})
-    .catch(error=>{root.innerHTML="Đã có lỗi xảy ra"});
+    .catch(error=>{root.html("Đã có lỗi xảy ra")});
 function upload()
 {
     for(var i=now;i<max;i++)

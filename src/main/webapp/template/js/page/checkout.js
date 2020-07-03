@@ -207,6 +207,7 @@ async function doWork() {
         var idproduct=$(this).parents("tr").find("input.idproduct").val();
         $(this).parents("tr").remove();
         deleteItemCart(idproduct,index);
+        SetTotalPrice();
     });
     $(".btn_thanhtoan").click(function (e) {
         if(listItem.length!==0){

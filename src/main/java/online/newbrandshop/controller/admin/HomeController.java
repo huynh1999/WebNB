@@ -1,6 +1,7 @@
 package online.newbrandshop.controller.admin;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import online.newbrandshop.modal.BillEntity;
 import online.newbrandshop.modal.CategoryEntity;
 import online.newbrandshop.modal.ImageEntity;
 import online.newbrandshop.modal.ProductEntity;
@@ -8,10 +9,7 @@ import online.newbrandshop.repository.*;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,6 +35,8 @@ public class HomeController {
     ProductRepository productRepository;
     @Autowired
     CategoryRepository categoryRepository;
+    @Autowired
+    BillRepository billRepository;
 //    @RequestMapping("/uploadImage")
 //    ModelAndView uploadImage()
 //    {
@@ -83,10 +83,13 @@ public class HomeController {
         ModelAndView mav=new ModelAndView("admin/donhang/list");
         return mav;
     }
-    @RequestMapping("/chitiethd")
-    ModelAndView adminchitietdh()
+    @RequestMapping("/bill/{idBill}")
+    ModelAndView adminchitietdh(@PathVariable("idBill")long idBill)
     {
         ModelAndView mav=new ModelAndView("admin/donhang/chitiet");
+        BillEntity billEntity=billRepository.findById(idBill);
+        mav.addObject("bill",billEntity);
+        mav.addObject("payer",billEntity.getPayerEntity());
         return mav;
     }
     @RequestMapping("/manageCategory")
@@ -181,13 +184,10 @@ public class HomeController {
             return "redirect:/admin/AddNewProduct?addfail";
         }
     }
-//    @RequestMapping("/uploadedImage")
-//    ModelAndView uploadedImage()
-//    {
-//        ModelAndView mav=new ModelAndView("/web/UploadedImage");
-//        List<ImageEntity> imageEntities=imageRepository.findAll();
-//        mav.addObject("test","huynh");
-//        mav.addObject("list",imageEntities);
-//        return mav;
-//    }
+    @RequestMapping("/uploadedImage")
+    ModelAndView uploadedImage()
+    {
+        ModelAndView mav=new ModelAndView("admin/imagepage/list");
+        return mav;
+    }
 }

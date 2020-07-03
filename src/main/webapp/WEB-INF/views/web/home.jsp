@@ -28,16 +28,13 @@
             </ol>
             <div class="carousel-inner" role="main">
                 <div class="carousel-item active">
-                    <p>Due to unavoidable circumstances, some orders may be delayed. We apologize for any inconvenience
-                        and
-                        we appreciate your patience.</p>
+                    <p>Mừng khai trương, Giảm giá 20000vnđ cho khách hàng đăng kí thành viên</p>
                 </div>
                 <div class="carousel-item">
-                    <span>FREE DELIVERY TO YOU</span>
-                    <p>Get Free Standard Delivery On All Orders. See Details</p>
+                    <p>Miễn phí vận chuyển trong ngày 3 - 5/7/2020</p>
                 </div>
                 <div class="carousel-item">
-                    <p>hello</p>
+                    <p>New Brand Shop</p>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#my_slide" role="button" data-slide="prev">
@@ -78,7 +75,7 @@
                 <div class="motavideo">
                     <h5>GUCCI</h5>
                     <p>Là thương hiệu nổi tiếng và uy tín ở châu Âu. Sản phẩm có nhiều mẫu mã đa dạng phong phú. </p>
-                    <a href="" class="shopnow">Shop now</a>
+                    <a href="/category/ClothesWomanNike" class="shopnow">Shop now</a>
                 </div>
 
             </div>
@@ -93,7 +90,7 @@
                 <div class="motavideo">
                     <h5>NIKE</h5>
                     <p>Là thương hiệu nổi tiếng và uy tín ở châu Âu. Sản phẩm có nhiều mẫu mã đa dạng phong phú. </p>
-                    <a href="" class="shopnow">Shop now</a>
+                    <a href="/category/ClothesKidBoyNike" class="shopnow">Shop now</a>
                 </div>
 
             </div>
@@ -108,7 +105,7 @@
                 <div class="motavideo">
                     <h5>ADIDAS</h5>
                     <p>Là thương hiệu nổi tiếng và uy tín ở châu Âu. Sản phẩm có nhiều mẫu mã đa dạng phong phú. </p>
-                    <a href="" class="shopnow">Shop now</a>
+                    <a href="/category/ClothesKidGirlNike" class="shopnow">Shop now</a>
                 </div>
 
             </div>
@@ -123,7 +120,7 @@
                 <div class="motavideo">
                     <h5>CHANEL</h5>
                     <p>Là thương hiệu nổi tiếng và uy tín ở châu Âu. Sản phẩm có nhiều mẫu mã đa dạng phong phú. </p>
-                    <a href="" class="shopnow">Shop now</a>
+                    <a href="/category/ClothesMenNike" class="shopnow">Shop now</a>
                 </div>
 
             </div>
@@ -137,53 +134,53 @@
         <h5 class="tieu_de">TOP PRODUCT</h5>
         <div class="product-slider row">
             <div class="onepartslide">
-                <a href="#"><img alt="sanpham4" class="anhsanpham"
+                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
                         src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
                         alt=""></a>
                 <p>Ao nike 12212</p>
                 <p>100.000 vnd</p>
                 <div class="shopbasket">
-                    <a href=""><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="#"><img alt="sanpham4" class="anhsanpham"
+                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
                         src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
                         alt=""></a>
                 <p>Ao nike 12212</p>
                 <p>100.000 vnd</p>
                 <div class="shopbasket">
-                    <a href=""><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="#"><img alt="sanpham4" class="anhsanpham"
+                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
                         src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
                         alt=""></a>
                 <p>Ao nike 12212</p>
                 <p>100.000 vnd</p>
                 <div class="shopbasket">
-                    <a href=""><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="#"><img alt="sanpham4" class="anhsanpham"
+                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
                         src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/2711de3d-4e22-1c00-56b4-0016a7829674.jpg?w=100&h=140&c=true"
                         alt=""></a>
                 <p>Ao nike 12212</p>
                 <p>100.000 vnd</p>
                 <div class="shopbasket">
-                    <a href=""><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="#"><img alt="sanpham4" class="anhsanpham"
+                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
                         src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
                         alt=""></a>
                 <p>Ao nike 12212</p>
                 <p>100.000 vnd</p>
                 <div class="shopbasket">
-                    <a href=""><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
         </div>

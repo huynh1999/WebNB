@@ -124,12 +124,12 @@
 <div class="header" role="list">
 	<div class="headinfo" role="listitem">
 		<div class="headinfo_left" role="listitem">
-			<a href="#" class="text_" data-target="#myModal">Join us</a>
+			<a href="https://www.facebook.com/NBS-SHOP-106383004443658/" class="text_" data-target="#myModal">Join us</a>
 		</div>
 		<sec:authorize access="isAnonymous()">
 			<div class="headinfo_right" role="listitem">
 				<a href="#" class="text_ loginclick">Login</a>
-				<a href="#" class="text_">Help</a>
+				<a href="/help" class="text_">Help</a>
 				<a href="${pageContext.request.contextPath}/cart" class="fa fa-shopping-cart icon_color"></a>
 				<a href="#" class="fa fa-map-marker icon_color"><span class="text_"> HCM</span></a>
 			</div>
@@ -152,7 +152,7 @@
 	<div class="row" style="margin-left: 0px; margin-right: 0px;">
                 <!-- <div class="headmenu"> -->
                 <div class="col-xl-3 col-lg-3 headmenu_cl1" role="listitem">
-                    NBShop
+                    <a href="/home">NBShop</a>
                 </div>
                 <div class="col-xl-6 col-lg-6 headmenu_cl2" role="list">
                     <ul class="menu_list" role="list">
@@ -160,14 +160,16 @@
 			</ul>
 		</div>
 		<div class="col-xl-3 col-lg-3 headmenu_cl3 " role="form">
+		<form class="search" action="/search">
                     <div class="input-group mycusinput-group">
-                        <input id="showinput" type="text" class="form-control" placeholder="Search"
+                        <input id="input1" type="text" class="form-control" placeholder="Search" name="keyword"
                             style="height: 100%;">
                         <div class="input-group-append">
-                            <button class="btn btn-success mybutton-search" type="submit"><i
+                            <button class="btn btn-success mybutton-search" type="button"><i
                                     class="fa fa-search"></i></button>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
             <!-- menu thu gon  -->
@@ -180,28 +182,29 @@
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">Logout</a>
                     </div> -->
-                    <div id="accordion">
+                    <div id="accordion" style="display: none;">
                         <div class="acc" style="background-color: black;">
                             <div class="acc-header">
-                                <a class="acc-link" data-toggle="collapse" href="#collapseOne">Login</a>
+                                <a class="acc-link" data-toggle="collapse" href="#collapseOne">Chào,Huỳnh</a>
                             </div>
                             <div id="collapseOne" class="collapse" data-parent="#accordion" style="display: none;">
                                 <div class="acc-body">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item" style="background-color: black;"><a
-                                                href="">Profile</a> </li>
+                                                href="/user/profile">Profile</a> </li>
                                         <li class="list-group-item" style="background-color: black;"><a
-                                                href="">Logout</a> </li>
+                                                href="/logout">Logout</a> </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <a href="#">Giỏ hàng</a>
-                    <a href="#">Sản phẩm</a>
-                    <a href="#">Join us</a>
-                    <a href="#">Help</a>
+                    <a href="/login">Login</a>
+                    <a href="${pageContext.request.contextPath}/cart">Giỏ hàng</a>
+                    <a href="/category/ClothesWomanNike">Sản phẩm</a>
+                    <a href="https://www.facebook.com/NBS-SHOP-106383004443658/">Join us</a>
+                    <a href="/help">Help</a>
                 </div>
 
                 <button class="openbtn" onclick="openNav()">☰</button>
@@ -377,28 +380,28 @@
             <div class="col">
                 <h5 style="color: black;">About NBShop</h5>
                 <ul style="list-style: none;">
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Ứng tuyển việc làm</a></li>
+                    <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
+                    <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
+                    <li><a href="/help" style="color: aliceblue; text-decoration: none;">Ứng tuyển việc làm</a></li>
                 </ul>
             </div>
             <div class="col">
                 <h5 style="color: black;">Get help</h5>
                 <ul style="list-style: none;">
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>
-                    <li><a href="" style="color: aliceblue; text-decoration: none;">Liên hệ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
+                    <li><a href="/help" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>
+                    <li><a href="https://mail.google.com/" style="color: aliceblue; text-decoration: none;">Liên hệ</a></li>
                 </ul>
             </div>
             <div class="col"></div>
             <div class="col" style="margin: auto; text-align: center;">
                 <ul style="list-style: none; margin: auto; text-align: left;">
-                    <li><a href=""><i class="fa fa-facebook-square text-primary p-2"
+                    <li><a href="https://www.facebook.com/NBS-SHOP-106383004443658/"><i class="fa fa-facebook-square text-primary p-2"
                                 style="font-size: xx-large;"></i></a>
                     </li>
-                    <li><a href=""><i class="fa fa-twitter-square text-info p-2" style="font-size: xx-large;"></i></a>
+                    <li><a href="https://twitter.com/explore"><i class="fa fa-twitter-square text-info p-2" style="font-size: xx-large;"></i></a>
                     </li>
-                    <li><a href=""><i class="fa fa-youtube-square text-danger p-2" style="font-size: xx-large;"></i></a>
+                    <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-square text-danger p-2" style="font-size: xx-large;"></i></a>
                     </li>
                 </ul>
 
@@ -427,12 +430,12 @@
     <script>
         if ($(window).width() < 1024) {
             $(".mybutton-search").click(function () {
-                $("#showinput").show();
+                $("#input1").show();
                 $(".headmenu_cl1").hide();
                 $(".headmenu_cl3").css("width", "100%");
             })
             $(".header").mouseleave(function () {
-                $("#showinput").hide();
+                $("#input1").hide();
                 $(".headmenu_cl1").show();
                 $(".headmenu_cl3").css("width", "fit-content");
             })

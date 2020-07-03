@@ -50,7 +50,7 @@ public class Database {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/newbrandshop");
         dataSource.setUsername("root");
-        dataSource.setPassword("1302");
+        dataSource.setPassword("Gecafl1023");
         return dataSource;
     }
 

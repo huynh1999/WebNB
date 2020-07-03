@@ -47,8 +47,8 @@
             <div class="auth">
                 <p id="login_with">Or login with</p>
             </div>
-            <div class="links">
-                    <fb:login-button size="xlarge"
+            <div class="links" style="margin:auto;text-align:center;">
+                    <fb:login-button size="large"
                                      scope="public_profile,email"
                                      onlogin="checkLoginState();">
                         Connect to Facebook

@@ -1,4 +1,4 @@
-package online.newbrandshop.controller.web;
+	package online.newbrandshop.controller.web;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -136,6 +136,23 @@ public class HomeController {
 //		return mav;
 //	}
 
+	@RequestMapping("/hethongcuahang")
+	ModelAndView hethongcuahang(){
+		ModelAndView mav=new ModelAndView("web/hethongcuahang");
+		return mav;
+	}
+	@RequestMapping("/thongtinshop")
+	ModelAndView thongtinshop(){
+		ModelAndView mav=new ModelAndView("web/thongtinshop");
+		return mav;
+	}
+	@RequestMapping("/help")
+	ModelAndView help(){
+		ModelAndView mav=new ModelAndView("web/help");
+		return mav;
+	}
+	//
+	//
 	@RequestMapping("/cart")
 	ModelAndView cart(){
 		ModelAndView mav=new ModelAndView("web/checkout");

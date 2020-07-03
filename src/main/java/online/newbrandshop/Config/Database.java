@@ -48,7 +48,7 @@ public class Database {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/newbrandshop");
+        dataSource.setUrl("jdbc:mysql://58.186.19.154:3306/newbrandshop");
         dataSource.setUsername("root");
         dataSource.setPassword("1302");
         return dataSource;

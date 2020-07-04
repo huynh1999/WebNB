@@ -14,7 +14,6 @@
         content="Newbrandshop.online chuyên buôn bán các loại áo quần hàng hiệu, thời trang, mẫu mã đa dạng, giá cả hợp lí bằng nhiều hình thức. Khách hàng có thể đến trực tiếp cửa hàng để chọn lựa và mua sản phẩm. Ngoài ra khách hàng củng có thể mua bằng hình thức online vô cùng tiện lợi.">
     <!-- Bootstrap CSS -->
     <!-- css  -->
-    <link rel="stylesheet" href="/template/css/nhshop.css">
 
 </head>
 

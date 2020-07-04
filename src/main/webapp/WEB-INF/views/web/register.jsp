@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="/template/css/login.css">
+    <link rel="stylesheet" onerror="errorHandler()" href="/template/css/login.css">
 </head>
 <body>
 <div class="container">

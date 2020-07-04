@@ -12,8 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/nhshop.css">
-  <link rel="shortcut icon" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" onerror="errorHandler()" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
 </head>
 
 <body>

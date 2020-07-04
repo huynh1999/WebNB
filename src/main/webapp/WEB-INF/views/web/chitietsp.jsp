@@ -11,10 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/nhshop.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/category.css">
-
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/template/css/chitietsp.css">
+  <link rel="stylesheet"  onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/category.css">
+  <link rel="stylesheet" onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/chitietsp.css">
 </head>
 
 <body>

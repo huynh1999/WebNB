@@ -13,7 +13,11 @@
 
 		gtag('config', 'UA-169858618-1');
 	</script>
-
+	<script>
+		function errorHandler(script) {
+			location.reload();
+		}
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
@@ -22,7 +26,7 @@
 	<link href="<c:url value='/template/css/bootstrap.min.css' />"
 		  rel="stylesheet" type="text/css">
 	<dec:head />
-	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/nhshop.css">
+	<link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/nhshop.css">
 	<link rel="shortcut icon" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
 	<!-- slick slide -->
 	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
@@ -410,15 +414,15 @@
 
     </div>
 
-	<script src='/template/js/common/axios.js'></script>
+	<script src="/template/js/common/axios.js" onerror="errorHandler()"></script>
 	<link href="<c:url value='/template/css/font-awesome.min.css' />"
 		  rel="stylesheet" type="text/css">
-	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
-	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
-	<script type="text/javascript" src="/template/slick/slick.min.js"></script>
-	<script src="<c:url value='/template/js/common/bootstrap.min.js' />"></script>
-	<script src="/template/js/common/popper.js"></script>
-	<script src="/template/js/page/web.js"></script>
+	<script src="<c:url value='/template/js/common/jquery.js' />" onerror="errorHandler()"></script>
+	<script src="<c:url value='/template/js/common/jquery.js' />" onerror="errorHandler()"></script>
+	<script type="text/javascript" src="/template/slick/slick.min.js" onerror="errorHandler()"></script>
+	<script src="<c:url value='/template/js/common/bootstrap.min.js' />" onerror="errorHandler()"></script>
+	<script src="${pageContext.request.contextPath}/template/js/common/popper.js" onerror="errorHandler()"></script>
+	<script src="/template/js/page/web.js" onerror="errorHandler()"></script>
 	<script>
         $('.main-slider').slick({
             slidesToShow: 1,

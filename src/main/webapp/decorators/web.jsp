@@ -410,14 +410,14 @@
 
     </div>
 
-	<script src="${pageContext.request.contextPath}/template/js/common/axios.js"></script>
+	<script src='/template/js/common/axios.js'></script>
 	<link href="<c:url value='/template/css/font-awesome.min.css' />"
 		  rel="stylesheet" type="text/css">
 	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
 	<script src="<c:url value='/template/js/common/jquery.js' />"></script>
 	<script type="text/javascript" src="/template/slick/slick.min.js"></script>
 	<script src="<c:url value='/template/js/common/bootstrap.min.js' />"></script>
-	<script src="${pageContext.request.contextPath}/template/js/common/popper.js"></script>
+	<script src="/template/js/common/popper.js"></script>
 	<script src="/template/js/page/web.js"></script>
 	<script>
         $('.main-slider').slick({

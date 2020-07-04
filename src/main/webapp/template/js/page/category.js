@@ -13,7 +13,7 @@ function upload()
     {
            root.append("<div class=\"_1sanpham\" role=\"listitem\">\n" +
                     "                <a href=\""+"/product/"+data[i].id + "?"+data[i].name.replace(/\s/g,"-")+"\"><img alt=\"sanpham1\" class=\"anhsanpham\"\n" +
-                    "                        src="+data[i].url1 +
+                    "                        src=\""+data[i].url1 +"\""+
                     "                        onerror=\"errorLoadImg.call(this)\"></a>\n" +
                     "                <p style=\" margin-top: 10px;\">"+data[i].name+"</p>\n" +
                     "                <p>"+data[i].price+"</p>\n" +

@@ -326,7 +326,7 @@
 									<label>User Name</label>
 								</div>
 								<div class="input-field">
-									<input type="text" required="" name="fullname" pattern="([^\u0000-\u007F]|[ a-zA-z]){6,25}" title="Vui lòng nhập đúng định dạng">
+									<input type="text" required="" name="fullname" pattern="([^\u0000-\u007F]|[ a-zA-z0-9]){6,25}" title="Vui lòng nhập đúng định dạng">
 									<label>Full Name</label>
 								</div>
 								<div class="input-field">
@@ -347,7 +347,7 @@
 									<label>Password</label>
 								</div>
 								<div class="input-field">
-									<input class="pswrd" type="password" required="">
+									<input class="pswrd" id="repassword" type="password" required="">
 									<span class="show"></span>
 									<label>Password Again</label>
 								</div>

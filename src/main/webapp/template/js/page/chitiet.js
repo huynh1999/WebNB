@@ -34,6 +34,7 @@ function addCart() {
     }
 }
 function uploadContent() {
+    $("#price").text($("#price").text().replace(/\D/g,"").replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')+"đ");
     var root=document.getElementById("des");
     var des=Array.isArray(content.des)?content.des[0]:content.des;
     root.innerText=des.replace(". ","\n");
@@ -89,7 +90,7 @@ async function uploadRecommendProduct() {
             "                        src=\""+recommendProduct[i].url1+"\"\n" +
             "                        alt=\"\"></a>\n" +
             "                <p>"+recommendProduct[i].name+"</p>"+
-            "                <p>"+recommendProduct[i].price.replace("?","đ")+"</p></div>"
+            "                <p>"+recommendProduct[i].price.replace(/\D/g,"").replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')+"đ</p></div>"
     }
     element.innerHTML=content;
 }

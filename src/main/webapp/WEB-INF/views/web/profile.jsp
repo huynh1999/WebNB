@@ -86,7 +86,7 @@
                                                             <label>Mật khẩu cũ</label>
                                                         </div>
                                                         <div class="input-field">
-                                                            <input type="password" required="" id="newpass">
+                                                            <input type="password" required="" id="newpass" pattern="[a-zA-z0-9 ]{6,15}">
                                                             <label>Mật khẩu mới</label>
                                                         </div>
                                                         <div class="input-field">

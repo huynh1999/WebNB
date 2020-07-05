@@ -105,6 +105,9 @@ async function doWork() {
     $("#btnUpdate").click(function () {
         submitButton();
     });
+    $("#price").on("keyup",function(e){
+        $(this).val($(this).val().replace(/\D/g,""))
+    });
     console.log("test");
 }
 doWork();

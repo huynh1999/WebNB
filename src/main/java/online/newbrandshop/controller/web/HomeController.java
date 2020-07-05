@@ -41,8 +41,10 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-@Controller
+	@Controller
 public class HomeController {
 	@Autowired
 	UserRepository userRepository;
@@ -88,8 +90,13 @@ public class HomeController {
 								,@RequestParam("phone") String phone,@RequestParam("email")String email
 								,@RequestParam("password")String password,@RequestParam("address")String address)
 	{
-		System.out.println(fullName);
 		try {
+			Pattern regex=Pattern.compile("[a-zA-Z0-9 ]{6,15}");
+			Pattern regex1=Pattern.compile("[a-z0-9]{6,15}");
+			if(!(regex.matcher(password).matches()&&regex1.matcher(userName).matches()))
+			{
+				throw new Exception("error");
+			}
 			UserEntity userEntity = new UserEntity();
 			userEntity.setUserName(userName);
 			userEntity.setEmail(email);

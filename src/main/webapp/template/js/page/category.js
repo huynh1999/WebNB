@@ -16,7 +16,7 @@ function upload()
                     "                        src=\""+data[i].url1 +"\""+
                     "                        onerror=\"errorLoadImg.call(this)\"></a>\n" +
                     "                <p style=\" margin-top: 10px;\">"+data[i].name+"</p>\n" +
-                    "                <p>"+data[i].price+"</p>\n" +
+                    "                <p>"+data[i].price.replace(/\D/g,"").replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')+"đ</p>\n" +
                     "            </div>");
     }
     now=max;

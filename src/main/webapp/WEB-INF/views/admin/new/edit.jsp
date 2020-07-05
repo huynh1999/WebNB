@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Tên sản phẩm</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="name" name="name" value=""/>
+                                        <input required type="text" class="form-control" id="name" name="name" value=""/>
                                     </div>
                                 </div>
                                 <br/>
@@ -45,7 +45,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Mô tả</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="shortDescription" name="shortDescription" value=""/>
+                                        <input type="text" required class="form-control" id="shortDescription" name="shortDescription" value=""/>
                                     </div>
                                 </div>
                                 <br/>
@@ -53,7 +53,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Giá</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="price" name="price" value=""/>
+                                        <input type="text" required class="form-control" id="price" name="price" value=""/>
                                     </div>
                                 </div>
                                 <br/>

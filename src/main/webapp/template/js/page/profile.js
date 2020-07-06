@@ -23,6 +23,7 @@ function loadHistory() {
         else if(data[i].status===1)status="Đã xác nhận đơn hàng";
         else if(data[i].status===2)status="Đang vận chuyển";
         else if(data[i].status===3)status="Giao hàng thành công";
+        else if(data[i].status===4)status="Đã bị hủy";
         else status="Đơn bị hủy";
         content+="<tr class=\"mathang\">\n" +
             "                                    <td><a href=\"/bill/"+data[i].billName+"\">"+data[i].billName+"</a></td>\n" +

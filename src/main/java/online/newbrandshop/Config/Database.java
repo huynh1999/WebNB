@@ -48,9 +48,9 @@ public class Database {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/newbrandshop");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/newbrandshop?serverTimezone=UTC");
         dataSource.setUsername("root");
-        dataSource.setPassword("Gecafl1023");
+        dataSource.setPassword("1302");
         return dataSource;
     }
 

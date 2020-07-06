@@ -44,6 +44,11 @@ function SetupDefault()
     $("#form_register").on('submit',async function (e) {
         e.preventDefault();
         var t=await apiUsername();
+        if($("#password").val()!==$("#repassword"))
+        {
+            t=false;
+            alert("Password nhập lần 2 không giống lần thứ 1")
+        }
         if(t)
         {
             $("#form_register")[0].submit();

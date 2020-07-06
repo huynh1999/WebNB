@@ -21,5 +21,8 @@ async function doWork() {
         includeSelectAllOption: true
     });
     $('b').css('margin-top','0px');
+    $("#price").on("keyup",function(e){
+        $(this).val($(this).val().replace(/\D/g,""))
+    });
 }
 doWork();

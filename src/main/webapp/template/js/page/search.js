@@ -4,7 +4,7 @@ var max=12;
 var now=0;
 root=$("#box_item");
 var body=document.getElementsByTagName("body")[0];
-axios.post("/api/search/",{keyword:window.location.search.replace(/\W/g," ").replace(" keyword ","")})
+axios.post("/api/search/",{keyword:decodeURIComponent(window.location.search).replace("?keyword=","").replace(/\W/g,"_")})
     .then(re=>{
         if(max>re.data.length)max=re.data.length;
         data=re.data;

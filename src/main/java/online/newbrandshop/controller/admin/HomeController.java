@@ -136,7 +136,8 @@ public class HomeController {
     @RequestMapping(value = "/AddNewProduct",method = RequestMethod.POST)
     public String AddNewProduct(@RequestParam("title")String title,@RequestParam("shortDescription")String shortDescription,
                                 @RequestParam("price")String price,@RequestParam("images") List<CommonsMultipartFile> files,
-                                @RequestParam(value = "categoryCode",required = false)List<String> categoryCode, HttpSession session) throws FileNotFoundException, JsonProcessingException {
+                                @RequestParam(value = "categoryCode",required = false)List<String> categoryCode,
+                                @RequestParam("sizeText")String sizeText, HttpSession session) throws FileNotFoundException, JsonProcessingException {
         try {
             String path = session.getServletContext().getRealPath("/template/img");
             List<String> fileNameRe = new ArrayList<>();
@@ -170,6 +171,7 @@ public class HomeController {
             productEntity.setListCategories(categoryEntity);
             productEntity.setActive(1);
             productEntity.setPrice(price);
+            productEntity.setSize(sizeText);
             JSONObject object = new JSONObject();
             object.put("img", fileNameRe);
             object.put("des", shortDescription);

@@ -72,6 +72,7 @@ public class AdminApi {
         entity.setContent(node.get("content").asText());
         entity.setPrice(node.get("price").asText());
         entity.setName(node.get("name").asText());
+        entity.setSize(node.get("size").asText());
         productRepository.save(entity);
         return "ok";
     }

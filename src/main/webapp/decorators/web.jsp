@@ -152,7 +152,7 @@
 	<div class="row" style="margin-left: 0px; margin-right: 0px;">
                 <!-- <div class="headmenu"> -->
                 <div class="col-xl-3 col-lg-3 headmenu_cl1" role="listitem">
-                    <a href="/home">NBShop</a>
+                    <a href="/home" style="color: white; text-decoration: none;">NBShop</a>
                 </div>
                 <div class="col-xl-6 col-lg-6 headmenu_cl2" role="list">
                     <ul class="menu_list" role="list">

@@ -3,10 +3,6 @@ body {
     font-family: cursive;
     overflow-x: hidden;
 }
-a {
-	text-decoration: none;
-	color: white;
-}
 a:hover {
 	text-decoration: none;
 	color: white;
@@ -404,11 +400,11 @@ h5.tieu_de {
     /* margin-left: 200px;
     margin-top: 20px; */
 }
-
 i.mystar {
     /* margin-top: 25px;
     margin-left: 180px; */
     float: left;
+    font-size: x-large;
 }
 
 a.shopnow {
@@ -457,8 +453,6 @@ a.shopnow {
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
-    margin-left: 150px;
-    margin-right: 100px;
 }
 
 ._1sanpham {

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <i class="fa fa-home myhome"></i><i class="fa fa-angle-right myhome myarrow"></i>
+    <i class="fa fa-home mysize mystar"></i><i class="fa fa-angle-right mysize mystar myarrow"></i>
     <h5 class="tieu_de">Brand</h5>
     <div class="leftbox">
         <h5>Brand</h5>

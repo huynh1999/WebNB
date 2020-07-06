@@ -20,7 +20,7 @@
 <body>
   <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                 <h5>Giỏ hàng</h5>
                 <table class="table">
                     <tbody id="root">
@@ -28,15 +28,15 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                 <h5>Thanh toán</h5>
                 <div class="row textcenter" style="margin: auto;">
-                    <div class="col-6">
+                    <div class="col">
                         <p>Tổng tiền</p>
                         <p>Khuyến mãi</p>
 
                     </div>
-                    <div class="col-6">
+                    <div class="col">
                         <p id="tong"></p>
                         <p id="km"></p>
 

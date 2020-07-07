@@ -41,7 +41,7 @@
 <!-- Load Facebook SDK for JavaScript -->
 
 <%--Chat mess--%>
-<div class="container-fluid">
+<div class="container-fluid mynopad">
     <!-- header  -->
     <div class="header" role="list">
         <div class="headinfo" role="listitem">
@@ -74,7 +74,7 @@
         <div class="row" style="margin-left: 0px; margin-right: 0px;">
             <!-- <div class="headmenu"> -->
             <div class="col-xl-3 col-lg-3 headmenu_cl1" role="listitem">
-                <a href="/home">NBShop</a>
+                <a href="/home" style="color: white; text-decoration: none;">NBShop</a>
             </div>
             <div class="col-xl-6 col-lg-6 headmenu_cl2" role="list">
                 <ul class="menu_list" role="list">
@@ -300,7 +300,7 @@
     <!-- footer  -->
     <div class="row footer" style="margin-left: 0px; margin-right: 0px;">
         <div class="col">
-            <h5 style="color: black;">About NBShop</h5>
+            <h5 style="color: aliceblue;margin-top: 8px;">About NBShop</h5>
             <ul style="list-style: none;">
                 <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
                 <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
@@ -308,7 +308,7 @@
             </ul>
         </div>
         <div class="col">
-            <h5 style="color: black;">Get help</h5>
+            <h5 style="color: aliceblue;margin-top: 8px;">Get help</h5>
             <ul style="list-style: none;">
                 <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
                 <li><a href="/help" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>

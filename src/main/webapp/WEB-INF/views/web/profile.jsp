@@ -120,6 +120,7 @@
                     <div class="lichsumua" id="idlichsumua" style="overflow-x:auto; width: 100%;">
                         <br>
                         <h5><b>Lịch sử mua hàng</b> </h5>
+                        <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -144,6 +145,7 @@
 <%--                                </tr>--%>
                             </tbody>
                         </table>
+                        </div>
                     </div>
 <%--                    <div class="magiamgia" id="magg">--%>
 <%--                        <br>--%>
@@ -225,6 +227,6 @@
             $.getScript("/template/js/page/profile.js")
         }
     </script>
-
+</div>
 </body>
 </html>

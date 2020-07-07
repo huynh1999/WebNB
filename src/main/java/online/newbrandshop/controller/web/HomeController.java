@@ -158,6 +158,11 @@ public class HomeController {
 		ModelAndView mav=new ModelAndView("web/help");
 		return mav;
 	}
+	@RequestMapping("/chitietdonhang")
+	ModelAndView chitietdonhang(){
+		ModelAndView mav=new ModelAndView("web/chitietdonhang");
+		return mav;
+	}
 	//
 	//
 	@RequestMapping("/cart")

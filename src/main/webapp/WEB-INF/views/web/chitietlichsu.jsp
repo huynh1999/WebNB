@@ -43,7 +43,7 @@
         </div>
         <div class="row">
             <a href="" class="mr-5">Quay trở lại</a>
-            <button type="button" class="btn btn-warning">Theo dõi đơn hàng</button>
+            <button type="button" class="btn btn-warning"><a href="/chitietdonhang">Theo dõi đơn hàng</a></button>
         </div>
     </div>
 <script>

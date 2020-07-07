@@ -124,9 +124,9 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=189392698895180&autoLogAppEvents=1"></script>
 
 <%--Chat mess--%>
-<div class="container-fluid">
+<div class="container-fluid mynopad">
 <!-- header  -->
-<div class="header" role="list">
+<div class="header" role="list" style="padding:0px;">
 	<div class="headinfo" role="listitem">
 		<div class="headinfo_left" role="listitem">
 			<a href="https://www.facebook.com/NBS-SHOP-106383004443658/" class="text_" data-target="#myModal">Join us</a>
@@ -168,7 +168,7 @@
 		<form class="search" action="/search">
                     <div class="input-group mycusinput-group">
                         <input id="input1" type="text" class="form-control" placeholder="Search" name="keyword"
-                            style="height: 100%;">
+                            style="height: 44.6px;">
                         <div class="input-group-append">
                             <button class="btn btn-success mybutton-search" type="button"><i
                                     class="fa fa-search"></i></button>
@@ -381,9 +381,9 @@
 
 <%--	<!-- Footer -->--%>
 <!-- footer  -->
-        <div class="row footer" style="margin-left: 0px; margin-right: 0px;">
+        <div class="row footer" style="margin-left: 0px; margin-right: 0px; padding: 0px">
             <div class="col">
-                <h5 style="color: black;">About NBShop</h5>
+                <h5 style="color: aliceblue;margin-top: 8px;">About NBShop</h5>
                 <ul style="list-style: none;">
                     <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
                     <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
@@ -391,7 +391,7 @@
                 </ul>
             </div>
             <div class="col">
-                <h5 style="color: black;">Get help</h5>
+                <h5 style="color: aliceblue;margin-top: 8px;">Get help</h5>
                 <ul style="list-style: none;">
                     <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
                     <li><a href="/help" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>
@@ -413,8 +413,7 @@
             </div>
         </div>
 
-    </div>
-
+</div>
 	<script src="/template/js/common/axios.js" onerror="errorHandler()"></script>
 	<link href="<c:url value='/template/css/font-awesome.min.css' />"
 		  rel="stylesheet" type="text/css">
@@ -438,6 +437,7 @@
                 $("#input1").show();
                 $(".headmenu_cl1").hide();
                 $(".headmenu_cl3").css("width", "100%");
+                $(".headmenu_cl3").css("height", "44.6px");
             })
             $(".header").mouseleave(function () {
                 $("#input1").hide();
@@ -480,5 +480,6 @@
             ]
         });
     </script>
+    
 </body>
 </html>

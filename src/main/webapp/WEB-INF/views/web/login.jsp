@@ -23,7 +23,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-4" id="changebackcolor">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12" id="changebackcolor">
             <div class="chudau">
                 <h4 class="modal-title chudep">Login</h4>
             </div>

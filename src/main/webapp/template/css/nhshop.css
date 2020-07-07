@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
 /* } */
 /*div block 1*/
 .header {
-    background-color: rgb(163, 153, 16);
+    background-color: #9b1515;
     border-bottom: 0.5px groove lavender;
     /* position: fixed;
     top: 0;
@@ -57,7 +57,14 @@ body::-webkit-scrollbar {
 .headinfo a.icon_color {
     color: aliceblue;
 }
-
+.motavideo{
+	padding-left:20px;
+}
+.mynopad{
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
 .headinfo .position_left {
     margin-left: 30px;
 }
@@ -86,11 +93,11 @@ body::-webkit-scrollbar {
 
 a.dropdown-item {
     width: auto;
-    color: rgb(163, 153, 16);
+    color: #9b1515;
 }
 
 a.dropdown-item:hover {
-    background-color: rgb(163, 153, 16);
+    background-color: #9b1515;
     color: aliceblue;
 }
 
@@ -229,7 +236,7 @@ a.dropdown-item:hover {
     display: none;
     position: absolute;
     padding: 20px;
-    background: rgb(163, 153, 16);
+    background: #9b1515;
     z-index: 99;
 }
 
@@ -491,7 +498,7 @@ img.anhmau {
 .footer {
     z-index: 2;
     margin-top: 40px;
-    background-color: rgb(163, 153, 16);
+    background-color: black;
     opacity: 0.8;
     color: aliceblue;
     width: 100%;
@@ -740,13 +747,13 @@ form .button {
 }
 
 button.mybutton-search {
-    background-color: rgb(163, 153, 16);
-    border-color: rgb(163, 153, 16);
+    background-color: #9b1515;
+    border-color: #9b1515;
 }
 
 button.mybutton-search:hover {
-    background-color: rgb(0, 0, 0);
-    border-color: rgb(0, 0, 0);
+    background-color: #9b1515;
+    border-color: #9b1515;
 }
 
 /* product de cu  */

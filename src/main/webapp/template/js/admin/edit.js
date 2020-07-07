@@ -24,6 +24,19 @@ function loadData(data)
     $("#id").val(data.id);
     $("#price").val(data.price);
     $("#shortDescription").val(content.des);
+    //load size
+    var size=JSON.parse(data.size);
+    $("[contenteditable=true]").each(function () {
+        $(this).text(size[$(this).attr("id")]);
+    });
+    //validate size
+    $("[contenteditable=true]").on("input",function () {
+        $(this).text($(this).text().replace(/\D/,""));
+        if($(this).text()==="")
+        {
+            $(this).text(0);
+        }
+    });
     //Xữ lí category 
     axios.get('/admin/api/getCategory/'+idproduct).then(re=>{
         loadDefaultCategory(re.data);
@@ -69,6 +82,14 @@ function submitButton()
     var price=$('#price').val();
     var des=$('#shortDescription').val();
     var name=$('#name').val();
+    var sizeText=JSON.stringify({
+        XL:$("#XL").text(),
+        '2XL':$("#2XL").text(),
+        XS:$("#XS").text(),
+        L:$("#L").text(),
+        S:$("#S").text(),
+        M:$("#M").text(),
+    });
     var img=[];
     $('img').each(function () {
         img.push($(this).attr('src'));
@@ -85,6 +106,7 @@ function submitButton()
         des:des,
         lsCate: cateCode,
         name:name,
+        size:sizeText,
         content:JSON.stringify(content)
     }).then(re=>{
         if(re.data==="ok"){

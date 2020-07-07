@@ -170,7 +170,7 @@
                         <input id="input1" type="text" class="form-control" placeholder="Search" name="keyword"
                             style="height: 44.6px;">
                         <div class="input-group-append">
-                            <button class="btn btn-success mybutton-search" type="button"><i
+                            <button class="btn btn-success mybutton-search" type="submit"><i
                                     class="fa fa-search"></i></button>
                         </div>
                     </div>

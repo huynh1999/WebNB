@@ -59,6 +59,45 @@
                                 <br/>
                                 <br/>
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right">Size</label>
+                                    <table style="width: 60%;" class="table table-bordered table-responsive-md table-striped text-center">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">Size</th>
+                                            <th class="text-center">Số Lượng</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">XS</td>
+                                            <td class="pt-3-half" contenteditable="true" id="XS"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">XL</td>
+                                            <td class="pt-3-half" contenteditable="true" id="XL"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">2XL</td>
+                                            <td class="pt-3-half" contenteditable="true" id="2XL"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">L</td>
+                                            <td class="pt-3-half" contenteditable="true" id="L"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">M</td>
+                                            <td class="pt-3-half" contenteditable="true" id="M"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pt-3-half" contenteditable="false">S</td>
+                                            <td class="pt-3-half" contenteditable="true" id="S"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Hình ảnh</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="img" name="anh" value="${model.anh}"/>

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import online.newbrandshop.modal.*;
 import online.newbrandshop.repository.*;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 @RequestMapping("/admin/api/")
@@ -163,8 +162,37 @@ public class AdminApi {
     public String setStatus(@RequestBody JsonNode node)
     {
         try{
+            String statusContent;
+            switch (node.get("status").asInt()) {
+                case 0:
+                    statusContent="Đã tiếp nhận";
+                    break;
+                case 1:
+                    statusContent="Đã xác nhận đơn hàng";
+                    break;
+                case 2:
+                    statusContent="Đang vận chuyển";
+                    break;
+                case 3:
+                    statusContent="Giao hàng thành công";
+                    break;
+                case 4:
+                    statusContent="Đã hủy";
+                    break;
+                default:
+                    statusContent="";
+            }
             BillEntity billEntity=billRepository.findById(node.get("id").asLong());
             billEntity.setStatus(node.get("status").asInt());
+            JSONObject jsonObject=new JSONObject();
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+            formatter.setTimeZone(TimeZone.getTimeZone("GMT+7"));
+            jsonObject.put("date", formatter.format(date));
+            jsonObject.put("content",statusContent);
+            JSONArray array=new JSONArray(billEntity.getDetails());
+            array.put(jsonObject);
+            billEntity.setDetails(array.toString());
             billRepository.save(billEntity);
             return "ok";
         }

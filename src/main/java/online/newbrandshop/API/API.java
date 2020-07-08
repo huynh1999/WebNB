@@ -53,7 +53,6 @@ public class API {
     NameTypeRepository nameTypeRepository;
     @GetMapping(value = "/category/{cate}" ,produces = "application/json;charset=UTF-8")
     String FindCategory(@PathVariable("cate")String cate) throws JsonProcessingException {
-        Pageable pageRequest= new PageRequest(0,1);
         List<ProductEntity>list=categoryRepository.findOneByCategoryName(cate).getListProducts();
         ObjectMapper mapper=new ObjectMapper();
         Collections.reverse(list);

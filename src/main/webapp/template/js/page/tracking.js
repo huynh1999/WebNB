@@ -1,10 +1,11 @@
 var root=document.getElementById("root");
+var detailsTable=$("#detail-table");
+
 console.log("test");
 var content="";
 var listData=data;
 if(listData!=="error")
 {
-    $("#tracking").attr("href",window.location.pathname.replace("bill","tracking"));
     for(var i=0;i<listData.length;i++)
     {
         content+="<tr class=\"mathang\">\n" +
@@ -29,12 +30,19 @@ if(listData!=="error")
         "                            <td></td>\n" +
         "                            <td>"+total+"đ</td>\n" +
         "                        </tr>";
+    for(var i=0;i<details.length;i++)
+    {
+        detailsTable.append("<tr>\n" +
+            "                            <td>"+details[i].date+"</td>\n" +
+            "                            <td>"+details[i].content+"</td>\n" +
+            "                        </tr>")
+    }
     root.innerHTML=content;
 }
 else
-    {
-        content="Có vẻ bạn không có quyền xem đơn hàng này.Vui lòng đăng nhập hoặc đổi tài khoản khác";
-        root=document.getElementsByClassName("container");
-        document.getElementsByClassName("row")[1].remove();
-        root[0].innerHTML=content;
-    };
+{
+    content="Có vẻ bạn không có quyền xem đơn hàng này.Vui lòng đăng nhập hoặc đổi tài khoản khác";
+    root=document.getElementsByClassName("container");
+    document.getElementsByClassName("row")[1].remove();
+    root[0].innerHTML=content;
+};

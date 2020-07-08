@@ -77,6 +77,7 @@
                                 <option value='1'>Đã xác nhận đơn hàng</option>
                                 <option value='2'>Đang vận chuyển</option>
                                 <option value='3'>Giao hàng thành công</option>
+                                <option value='4'>Đã hủy</option>
                             </select>
                         </div>
                     </div>

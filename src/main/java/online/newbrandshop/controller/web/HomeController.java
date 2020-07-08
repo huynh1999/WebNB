@@ -39,8 +39,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -176,34 +179,66 @@ public class HomeController {
 		return mav;
 	}
 	@RequestMapping("bill/{nameBill}")
-	public ModelAndView GetBill(@PathVariable("nameBill") String nameBill) throws IOException {
-		BillEntity billEntity=billRepository.findByBillName(nameBill);
-		ModelAndView modelAndView=new ModelAndView("/web/chitietlichsu");
-		if(billEntity.getCreatedBy().equals("anonymousUser"))
-		{
-			modelAndView.addObject("data",billEntity.getContent());
-			modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
-		}
-		else{
-			if(SecurityUtils.isAuthenticanted())
+		public ModelAndView GetBill(@PathVariable("nameBill") String nameBill) throws IOException {
+			BillEntity billEntity=billRepository.findByBillName(nameBill);
+			ModelAndView modelAndView=new ModelAndView("/web/chitietlichsu");
+			if(billEntity.getCreatedBy().equals("anonymousUser"))
 			{
-				if(SecurityUtils.getPrincipal().getUsername().equals(billEntity.getCreatedBy())){
-					modelAndView.addObject("data",billEntity.getContent());
-					modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
-				}
-				else{
-					modelAndView.addObject("total",0);
-					modelAndView.addObject("data","error");
-				}
-			}else
+				modelAndView.addObject("data",billEntity.getContent());
+				modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
+			}
+			else{
+				if(SecurityUtils.isAuthenticanted())
+				{
+					if(SecurityUtils.getPrincipal().getUsername().equals(billEntity.getCreatedBy())){
+						modelAndView.addObject("data",billEntity.getContent());
+						modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
+					}
+					else{
+						modelAndView.addObject("total",0);
+						modelAndView.addObject("data","error");
+					}
+				}else
 				{
 					modelAndView.addObject("data","error");
 					modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
 				}
-		}
+			}
 
-		return modelAndView;
-	}
+			return modelAndView;
+		}
+		@RequestMapping("tracking/{nameBill}")
+		public ModelAndView GetTracking(@PathVariable("nameBill") String nameBill) throws IOException {
+			BillEntity billEntity=billRepository.findByBillName(nameBill);
+			ModelAndView modelAndView=new ModelAndView("/web/chitietdonhang");
+			modelAndView.addObject("details","123");
+			if(billEntity.getCreatedBy().equals("anonymousUser"))
+			{
+				modelAndView.addObject("data",billEntity.getContent());
+				modelAndView.addObject("details",billEntity.getDetails());
+				modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
+			}
+			else{
+				if(SecurityUtils.isAuthenticanted())
+				{
+					if(SecurityUtils.getPrincipal().getUsername().equals(billEntity.getCreatedBy())){
+						modelAndView.addObject("data",billEntity.getContent());
+						modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
+						modelAndView.addObject("details",billEntity.getDetails());
+					}
+					else{
+						modelAndView.addObject("total",0);
+						modelAndView.addObject("data","error");
+					}
+				}else
+				{
+					modelAndView.addObject("data","error");
+					modelAndView.addObject("total",new String(billEntity.getTotalMoney()));
+				}
+			}
+
+			return modelAndView;
+		}
 
 	@RequestMapping(value = "/checkout",method = RequestMethod.POST)
 	String checkout(@RequestParam("content")String content,@RequestParam("name")String name
@@ -242,6 +277,15 @@ public class HomeController {
 				jsonArray.put(json);
 				totalMoney=totalMoney.add(new BigInteger(productEntity.getPrice().replaceAll("\\D+","")).multiply(new BigInteger(single.get("amount").asText())));
 			}
+			JSONObject jsonObject=new JSONObject();
+			JSONArray array=new JSONArray();
+			Date date = new Date();
+			SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+			formatter.setTimeZone(TimeZone.getTimeZone("GMT+7"));
+			jsonObject.put("date", formatter.format(date));
+			jsonObject.put("content","Đã tiếp nhận đơn hàng");
+			array.put(jsonObject);
+			billEntity.setDetails(array.toString());
 			billEntity.setContent(jsonArray.toString());
 			billEntity.setTotalMoney(totalMoney.toString());
 			billEntity.setPaymentMethod("COD");

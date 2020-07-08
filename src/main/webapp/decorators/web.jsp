@@ -2,7 +2,7 @@
 <%@include file="/common/taglib.jsp"%>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169860339-1"></script>
@@ -278,7 +278,7 @@
 							</div>
 						</div>
 						<div class="signup">
-							<p id="signup">Not a member? <a href="#" id="signuplink" data-dismiss="modal">Signup now</a></p>
+							<p id="signup">Not a member? <a href="#" data-dismiss="modal">Signup now</a></p>
 						</div>
 					</div>
 
@@ -385,17 +385,17 @@
             <div class="col" style="margin: auto;">
                 <h5 style="color: aliceblue;margin-top: 8px;">About NBShop</h5>
                 <ul style="list-style: none;">
-                    <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
-                    <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;">Thông tin</a></li>
-                    <li><a href="/help" style="color: aliceblue; text-decoration: none;">Ứng tuyển việc làm</a></li>
+                    <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;"><h5>Hệ thống cửa hàng</h5></a></li>
+                    <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;"><h5>Thông tin</h5></a></li>
+                    <li><a href="/help" style="color: aliceblue; text-decoration: none;"><h5>Ứng tuyển việc làm</h5></a></li>
                 </ul>
             </div>
             <div class="col" style="margin: auto;">
                 <h5 style="color: aliceblue;margin-top: 8px;">Get help</h5>
                 <ul style="list-style: none;">
-                    <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
-                    <li><a href="/help" style="color: aliceblue; text-decoration: none;">Chính sách</a></li>
-                    <li><a href="https://mail.google.com/" style="color: aliceblue; text-decoration: none;">Liên hệ</a></li>
+                    <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;"><h5>Giỏ hàng</h5></a></li>
+                    <li><a href="/help" style="color: aliceblue; text-decoration: none;"><h5>Chính sách</h5></a></li>
+                    <li><a href="https://mail.google.com/" style="color: aliceblue; text-decoration: none;"><h5>Liên hệ</h5></a></li>
                 </ul>
             </div>
             

@@ -2,7 +2,7 @@
 <%@include file="/common/taglib.jsp"%>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="signup">
-                                <p id="signup">Not a member? <a href="#" id="signuplink" data-dismiss="modal">Signup now</a></p>
+                                <p id="signup">Not a member? <a href="#"  data-dismiss="modal">Signup now</a></p>
                             </div>
                         </div>
 

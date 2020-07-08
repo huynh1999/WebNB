@@ -38,15 +38,25 @@ async function uploadContent()
         "                                        <th>"+data.billEntity.totalMoney+"</th>\n" +
         "                                    </tr>";
     $("#listP").append(contentList);
+    if(data.billEntity.status>=3){
+        $("#status").attr("disabled","disabled")
+    }
     $("#status").find("option").eq(data.billEntity.status).attr("selected","selected");
     $("#status").on("change",function () {
+        var t=false;
+        if($(this).find("option:selected").val()>=3) {
+            t = confirm("Bạn có chắc muốn thay đổi trạng thái.\nTrạng thái này sau khi thay đổi sẽ không thể hoàn lại.");
+            if (!t) return;
+        }
        axios.post("/admin/api/setStatus",{
            id:data.billEntity.id,
            status:$(this).find("option:selected").val()
        }).then(re=>{
            if(re.data==="ok")alert("Thay đổi trạng thái thành công.");
            else alert("Có lỗi khi thay đổi trạng thái");
+           if(t)location.reload();
        })
+
     });
 
     console.log(data);

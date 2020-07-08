@@ -4,7 +4,8 @@ function uploadStatus()
     var content="<option value='0'>Đã tiếp nhận</option>"+
         "<option value='1'>Đã xác nhận đơn hàng</option>"+
         "<option value='2'>Đang vận chuyển</option>"+
-        "<option value='3'>Giao hàng thành công</option>";
+        "<option value='3'>Giao hàng thành công</option>"+
+        "<option value='4'>Đã hủy</option>";
     document.getElementById("statusCode").innerHTML=content;
 }
 function uploadContent(data)
@@ -25,6 +26,9 @@ function uploadContent(data)
                 break;
             case 3:
                 statusContent="Giao hàng thành công";
+                break;
+            case 4:
+                statusContent="Đã hủy";
                 break;
         }
         content+="<tr>\n" +

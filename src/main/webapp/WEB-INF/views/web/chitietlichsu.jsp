@@ -9,17 +9,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->s
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/checkout.css">
-<link rel="stylesheet" onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/profile.css">
+  <link rel="stylesheet" onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/profile.css">
   <link rel="stylesheet" onerror="errorHandler()" href="${pageContext.request.contextPath}/template/css/chitietlichsu.css">
 </head>
-
 <body>
 <script>
     var error="error";
-  var data=${data};
-  var total=${total};
+    var data=${data};
+    var total=${total};
 </script>
     <div class="container">
         <div class="row">
@@ -43,7 +42,7 @@
         </div>
         <div class="row">
             <a href="" class="mr-5">Quay trở lại</a>
-            <button type="button" class="btn btn-warning"><a href="/chitietdonhang">Theo dõi đơn hàng</a></button>
+            <button type="button" class="btn btn-warning"><a id="tracking" href="">Theo dõi đơn hàng</a></button>
         </div>
     </div>
 <script>

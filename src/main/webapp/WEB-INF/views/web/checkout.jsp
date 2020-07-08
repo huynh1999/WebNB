@@ -194,46 +194,8 @@
                     style="font-size: x-large; margin-top: 20px; background-image: -webkit-linear-gradient(#9ea811,#9dbd10,#e812a6);">
                     Các sản phẩm đề xuất</h6>
                 <div style="margin: auto;" role="list">
-                    <div class="row" role="list" style="text-align: center;">
-                        <div class="col _1sanpham" role="listitem">
-                            <a href="#"><img alt="sanpham1" class="anhsanpham"
-                                    src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b01-0019570/f7e1d4ae-c9b3-0100-d1ac-0016c9eb68f5.jpg?w=440"
-                                    alt=""></a>
-                            <p>100.000 vnd</p>
-                            <!-- mau  -->
-                            <a href="#"><img alt="mau sac sp1" class="anhmau"
-                                    src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b01-0019570/f7e1d4ae-c9b3-0100-d1ac-0016c9eb68f5.jpg?w=440"
-                                    alt=""></a>
+                    <div class="row" role="list" id="recommendProduct" style="text-align: center;">
 
-                        </div>
-                        <div class="col _1sanpham" role="listitem">
-                            <a href="#"><img alt="sanpham2" class="anhsanpham"
-                                    src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
-                                    alt=""></a>
-                            <p>100.000 vnd</p>
-                            <!-- mau  -->
-                            <a href="#"><img alt="mau sanpham2" class="anhmau"
-                                    src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
-                                    alt=""></a>
-
-                        </div>
-                        <div class="col _1sanpham" role="listitem">
-                            <a href="#"><img alt="sanpham3" class="anhsanpham"
-                                    src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/80f8c358-7a9c-1e00-c2bc-0016a782c0ff.jpg?w=440"
-                                    alt=""></a>
-                            <p>100.000 vnd</p>
-                            <!-- mau  -->
-                            <a href="#"><img alt="mau sanpham3" class="anhmau"
-                                    src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/80f8c358-7a9c-1e00-c2bc-0016a782c0ff.jpg?w=440"
-                                    alt=""></a>
-                            <a href="#"><img alt="mau sanpham3" class="anhmau"
-                                    src="https://cdn3.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/6e5365aa-cd19-1b00-f315-0016a7827302.jpg?w=100&h=140&c=true"
-                                    alt=""></a>
-                            <a href="#"><img alt="mau sanpham3" class="anhmau"
-                                    src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/2711de3d-4e22-1c00-56b4-0016a7829674.jpg?w=100&h=140&c=true"
-                                    alt=""></a>
-
-                        </div>
                     </div>
                 </div>
             </div>

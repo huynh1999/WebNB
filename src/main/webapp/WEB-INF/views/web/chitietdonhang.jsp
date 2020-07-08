@@ -16,7 +16,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" onerror="errorHandler()" href="/template/css/profile.css">
+    <link rel="stylesheet" onerror="errorHandler()" href="/template/css/profile.css">
     <link rel="stylesheet" onerror="errorHandler()" href="/template/css/chitietlichsu.css">
     <style>
         #line {
@@ -56,28 +56,34 @@
 </head>
 
 <body>
+<script>
+    var error="error";
+    var data=${data};
+    var total=${total};
+    var details=${details};
+</script>
 <div class="container">
         <div class="row">
             <h5>Trạng thái đơn hàng</h5>
         </div><br>
         <div class="row">
             <div id="line">
-                <div class="circle" style="left:0%;">
+                <div class="circle" id="circle0" style="left:0%;">
                     <div class="popupSpan">
                         Đặt hàng thành công
                     </div>
                 </div>
-                <div class="circle" style="left:33%;background-color: white;">
+                <div class="circle" id="circle1" style="left:33%;">
                     <div class="popupSpan">
                         NBShop đã tiếp nhận
                     </div>
                 </div>
-                <div class="circle" style="left:66%;background-color: white;">
+                <div class="circle" id="circle1" style="left:66%;">
                     <div class="popupSpan">
                         Đang vận chuyển
                     </div>
                 </div>
-                <div class="circle" style="left:99%;background-color: white;">
+                <div class="circle" id="circle1" style="left:99%;background-color: white;">
                     <div class="popupSpan">
                         Giao hàng thành công
                     </div>
@@ -87,38 +93,15 @@
         <div class="row" style="margin-top: 65px">
             <h5>Chi tiết trạng thái đơn hàng</h5>
             <div class="table-responsive bg-light">
-                <table class="table">
+                <table class="table" >
                     <thead class="thead-light">
                         <tr>
-                            <th colspan="2">Ngày 12/22/2000</th>
+                            <th colspan="2">Ngày tháng</th>
+                            <th colspan="2">Nội dung</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>15:02</td>
-                            <td>Giao hàng thành công</td>
-                        </tr>
-                        <tr>
-                            <td>10:09</td>
-                            <td>Đang vận chuyển</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th colspan="2">Ngày 12/22/2000</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>12:00</td>
-                            <td>NBShop đã tiếp nhận</td>
-                        </tr>
-                        <tr>
-                            <td>2:00</td>
-                            <td>Đặt hàng thành công</td>
-                        </tr>
+                    <tbody id="detail-table">
+
                     </tbody>
                 </table>
             </div>
@@ -136,46 +119,18 @@
                             <th>Tạm tính</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="mathang">
-                            <td class="d-flex p-2">
-                                <a href=""><img class="anhnho"
-                                        src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-86f7b43f-2f76-42cb-b253-a7591b6032c7/jordan-short-sleeve-crew-BsLCrG.jpg"
-                                        alt=""></a>
-                                <a href="" class="p-2">Tên sp áo thun nike blalala123</a>
-                            </td>
-                            <td>500000</td>
-                            <td>1</td>
-                            <td>20000</td>
-                            <td>480000</td>
-                        </tr>
-                        <tr class="mathang">
-                            <td class="d-flex p-2">
-                                <a href=""><img class="anhnho"
-                                        src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-86f7b43f-2f76-42cb-b253-a7591b6032c7/jordan-short-sleeve-crew-BsLCrG.jpg"
-                                        alt=""></a>
-                                <a href="" class="p-2">Tên sp áo thun nike blalala123</a>
-                            </td>
-                            <td>500000</td>
-                            <td>1</td>
-                            <td>20000</td>
-                            <td>480000</td>
-                        </tr>
+                    <tbody id="root">
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <script>
-        var trangthaiflag = 3;
-        var distan=0;
-        var trangthai=["Đặt hàng thành công","NBShop đã tiếp nhận","Đang vận chuyển","Giao hàng thành công"]
-        for (var i = 0; i < trangthaiflag; i++) {
-            $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + distan +
-                '%;"><div class="popupSpan">' + trangthai[i] + '</div></div>');
-            distan+=33;
-        }
-    </script>
+<script>
+    window.onload=function () {
+        $.getScript("/template/js/page/tracking.js");
+    }
+</script>
 </body>
 
 </html>

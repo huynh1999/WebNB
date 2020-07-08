@@ -177,6 +177,25 @@ function SetDefaultValue()
         }
     }
 }
+async function uploadRecommendProduct() {
+    var idProduct=374;
+    var recommendProduct;
+    await axios.get("/api/getRecommendProduct/"+idProduct).then(re=>{
+        recommendProduct=re.data;
+    })
+    var element=document.getElementById("recommendProduct");
+    var content="";
+    for(var i=0;i<recommendProduct.length;i++)
+    {
+        content+="<div class=\"col _1sanpham\" role=\"listitem\">"+
+            "<a href=\"/product/"+recommendProduct[i].id+"\"><img alt=\"sanpham1\" class=\"anhsanpham\"\n" +
+            "                        src=\""+recommendProduct[i].url1+"\"\n" +
+            "                        alt=\"\"></a>\n" +
+            "                <p>"+recommendProduct[i].name+"</p>"+
+            "                <p>"+recommendProduct[i].price.replace(/\D/g,"").replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')+"đ</p></div>"
+    }
+    element.innerHTML=content;
+}
 
 //hàm cập nhật giá
 function SetTotalPrice()
@@ -219,6 +238,7 @@ async function doWork() {
     SetDefaultValue();
     SetTotalPrice();
     CheckOut();
+    await uploadRecommendProduct();
     console.log("test");
 }
 doWork();

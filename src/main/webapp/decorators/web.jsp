@@ -437,7 +437,7 @@
                 $("#input1").show();
                 $(".headmenu_cl1").hide();
                 $(".headmenu_cl3").css("width", "100%");
-                $(".headmenu_cl3").css("height", "44.6px");
+                $(".mybutton-search").attr("type","button");
             })
             $(".header").mouseleave(function () {
                 $("#input1").hide();

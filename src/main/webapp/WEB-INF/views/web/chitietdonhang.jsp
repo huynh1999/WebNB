@@ -62,22 +62,22 @@
         </div><br>
         <div class="row">
             <div id="line">
-                <div class="circle" id="circle0" style="left:0%;">
+                <div class="circle" style="left:0%;">
                     <div class="popupSpan">
                         Đặt hàng thành công
                     </div>
                 </div>
-                <div class="circle" id="circle1" style="left:33%;">
+                <div class="circle" style="left:33%;background-color: white;">
                     <div class="popupSpan">
                         NBShop đã tiếp nhận
                     </div>
                 </div>
-                <div class="circle" id="circle1" style="left:66%;">
+                <div class="circle" style="left:66%;background-color: white;">
                     <div class="popupSpan">
                         Đang vận chuyển
                     </div>
                 </div>
-                <div class="circle" id="circle1" style="left:99%;background-color: white;">
+                <div class="circle" style="left:99%;background-color: white;">
                     <div class="popupSpan">
                         Giao hàng thành công
                     </div>
@@ -166,6 +166,16 @@
             </div>
         </div>
     </div>
+    <script>
+        var trangthaiflag = 3;
+        var distan=0;
+        var trangthai=["Đặt hàng thành công","NBShop đã tiếp nhận","Đang vận chuyển","Giao hàng thành công"]
+        for (var i = 0; i < trangthaiflag; i++) {
+            $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + distan +
+                '%;"><div class="popupSpan">' + trangthai[i] + '</div></div>');
+            distan+=33;
+        }
+    </script>
 </body>
 
 </html>

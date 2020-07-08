@@ -382,7 +382,7 @@
 <%--	<!-- Footer -->--%>
 <!-- footer  -->
         <div class="row footer" style="margin-left: 0px; margin-right: 0px; padding: 0px">
-            <div class="col">
+            <div class="col" style="margin: auto;">
                 <h5 style="color: aliceblue;margin-top: 8px;">About NBShop</h5>
                 <ul style="list-style: none;">
                     <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;">Hệ thống cửa hàng</a></li>
@@ -390,7 +390,7 @@
                     <li><a href="/help" style="color: aliceblue; text-decoration: none;">Ứng tuyển việc làm</a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col" style="margin: auto;">
                 <h5 style="color: aliceblue;margin-top: 8px;">Get help</h5>
                 <ul style="list-style: none;">
                     <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;">Giỏ hàng</a></li>
@@ -398,19 +398,21 @@
                     <li><a href="https://mail.google.com/" style="color: aliceblue; text-decoration: none;">Liên hệ</a></li>
                 </ul>
             </div>
-            <div class="col"></div>
-            <div class="col" style="margin: auto; text-align: center;">
+            
+            <div class="col socialhide" style="margin: auto; text-align: center;">
                 <ul style="list-style: none; margin: auto; text-align: left;">
-                    <li><a href="https://www.facebook.com/NBS-SHOP-106383004443658/"><i class="fa fa-facebook-square text-primary p-2"
-                                style="font-size: xx-large;"></i></a>
+                    <li><a href="https://www.facebook.com/NBS-SHOP-106383004443658/" style="color:white;"><i class="fa fa-facebook-square text-primary p-2"
+                                style="font-size: xx-large;"></i>Facebook</a>
                     </li>
-                    <li><a href="https://twitter.com/explore"><i class="fa fa-twitter-square text-info p-2" style="font-size: xx-large;"></i></a>
+                    <li><a href="https://twitter.com/explore" style="color:white;"><i class="fa fa-twitter-square text-info p-2" style="font-size: xx-large;"></i>Twitter</a>
                     </li>
-                    <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-square text-danger p-2" style="font-size: xx-large;"></i></a>
+                    <li><a href="https://www.youtube.com/" style="color:white;"><i class="fa fa-youtube-square text-danger p-2" style="font-size: xx-large;"></i>Youtube</a>
                     </li>
                 </ul>
 
             </div>
+            <div class="col socialhide">
+            <div class="fb-page" data-href="https://www.facebook.com/NBS-SHOP-106383004443658/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/NBS-SHOP-106383004443658/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NBS-SHOP-106383004443658/">NBS SHOP</a></blockquote></div></div>
         </div>
 
 </div>
@@ -444,6 +446,7 @@
                 $(".headmenu_cl1").show();
                 $(".headmenu_cl3").css("width", "fit-content");
             })
+            $(".socialhide").hide();
         }
     </script>
     <script>

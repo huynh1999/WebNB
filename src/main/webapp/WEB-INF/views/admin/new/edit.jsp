@@ -61,7 +61,8 @@
                                 <br/>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Size</label>
-                                    <table style="width: 60%;" class="table table-bordered table-responsive-md table-striped text-center">
+                                 	<div class="col-sm-9" style="padding-left:12px">
+                                    <table style="width:60%;" class="table table-bordered table-responsive-md table-striped text-center">
                                         <thead>
                                         <tr>
                                             <th class="text-center">Size</th>
@@ -95,6 +96,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
+                                    </div>
                                 </div>
                                 <br/>
                                 <br/>
@@ -102,7 +104,7 @@
                                     <label class="col-sm-3 control-label no-padding-right">Hình ảnh</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="img" name="anh" value="${model.anh}"/>
-                                        <div class="row myanhnho" id="list_img">
+                                        <div class="row myanhnho" id="list_img" style="padding-left: 10px; padding-right: 12px;">
 
                                         </div>
                                     </div>
@@ -122,7 +124,7 @@
                                 <br/>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                            <input type="button" class="btn btn-white btn-warning btn-bold" value="Cập nhật" id="btnUpdate"/>
+                                            <input type="button" class="btn btn-warning btn-bold" value="Cập nhật" id="btnUpdate"/>
                                     </div>
                                 </div>
                             </form>

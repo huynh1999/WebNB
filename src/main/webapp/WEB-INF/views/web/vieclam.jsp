@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-  <title>Checkout</title>
+  <title>Viec lam</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,22 @@
         <iframe width="500" height="300" frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJv9WaflgndTERkTy-yPlm-go&key=AIzaSyCPPEGiPPNtJLKn4-iB52Azkdh14471nSU"
             allowfullscreen></iframe>
+                    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </body>
 

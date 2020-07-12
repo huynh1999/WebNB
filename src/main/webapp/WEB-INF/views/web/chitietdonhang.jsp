@@ -12,7 +12,7 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Tracking</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,6 +60,7 @@
     var error="error";
     var data=${data};
     var total=${total};
+    var status=${status};
     var details=${details};
 </script>
 <div class="container">
@@ -78,12 +79,12 @@
                         NBShop đã tiếp nhận
                     </div>
                 </div>
-                <div class="circle" id="circle1" style="left:66%;">
+                <div class="circle" id="circle2" style="left:66%;">
                     <div class="popupSpan">
                         Đang vận chuyển
                     </div>
                 </div>
-                <div class="circle" id="circle1" style="left:99%;background-color: white;">
+                <div class="circle" id="circle3" style="left:99%;background-color: white;">
                     <div class="popupSpan">
                         Giao hàng thành công
                     </div>

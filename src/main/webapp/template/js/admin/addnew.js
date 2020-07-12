@@ -7,6 +7,24 @@ function uploadBrand(data) {
     }
     root.innerHTML=options;
 }
+function loadInputImage(input)
+{
+    if (input.files) {
+        var filesAmount = input.files.length;
+        var element=$("#list_img");
+        element.html("");
+        for (i = 0; i < filesAmount; i++) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                element.append("<div class=\"anhnhothanhphan\">\n" +
+                    "                          <img src=\""+event.target.result+"\" alt=\"\">\n" +
+                    "                          </div>")
+            };
+            reader.readAsDataURL(input.files[i]);
+        }
+    }
+}
 async function doWork() {
     if (window.location.search === "?addsuccess")
     {
@@ -16,6 +34,7 @@ async function doWork() {
     {
         alert("Thêm sản phẩm thất bại");
     }
+    //submit
     $("#btnAdd").click(function (e) {
         e.preventDefault();
         var sizeText=JSON.stringify({
@@ -29,12 +48,13 @@ async function doWork() {
         $("#sizeText").val(sizeText);
         $("#formSubmit").submit();
     });
+    //multi select bootstrap
     await axios.get("/admin/api/getCategory").then(re=>{uploadBrand(re.data.split("|"))});
     $('#categoryCode').multiselect({
         includeSelectAllOption: true
     });
-    //validate price
     $('b').css('margin-top','0px');
+    //validate price
     $("#price").on("keyup",function(e){
         $(this).val($(this).val().replace(/\D/g,""))
     });
@@ -46,5 +66,9 @@ async function doWork() {
             $(this).text(0);
         }
     });
+    //load Input Image
+    $("#images").on("change",function () {
+        loadInputImage(this);
+    })
 }
 doWork();

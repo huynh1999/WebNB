@@ -38,6 +38,14 @@
                     <br />
                     <br />
                     <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Phương thức thanh toán</label>
+                        <div class="col-sm-9">
+                            <input id="payment" type="text" class="form-control" disabled />
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right">Khách hàng</label>
                         <div class="col-sm-9">
                             <input id="payer" type="text" class="form-control" disabled />

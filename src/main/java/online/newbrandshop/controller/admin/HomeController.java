@@ -6,6 +6,7 @@ import online.newbrandshop.modal.CategoryEntity;
 import online.newbrandshop.modal.ImageEntity;
 import online.newbrandshop.modal.ProductEntity;
 import online.newbrandshop.repository.*;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -106,8 +107,6 @@ public class HomeController {
     }
     ////-----//////
     
-    
-    
     @PostMapping("/saveimgs")
     public String SaveImg(@RequestParam("images") List<CommonsMultipartFile> files,HttpSession session)
     {
@@ -135,7 +134,7 @@ public class HomeController {
     }
     @RequestMapping(value = "/AddNewProduct",method = RequestMethod.POST)
     public String AddNewProduct(@RequestParam("title")String title,@RequestParam("shortDescription")String shortDescription,
-                                @RequestParam("price")String price,@RequestParam("images") List<CommonsMultipartFile> files,
+                                @RequestParam("price")String price,@RequestParam(value = "images",required = false) List<CommonsMultipartFile> files,
                                 @RequestParam(value = "categoryCode",required = false)List<String> categoryCode,
                                 @RequestParam("sizeText")String sizeText, HttpSession session) throws FileNotFoundException, JsonProcessingException {
         try {
@@ -191,5 +190,43 @@ public class HomeController {
     {
         ModelAndView mav=new ModelAndView("admin/imagepage/list");
         return mav;
+    }
+    @RequestMapping(value = "/uploadImgFromEdit",method = RequestMethod.POST)
+    public String upload(@RequestParam(value = "id",required = true)long id,@RequestParam(value = "images",required = false) List<CommonsMultipartFile> files
+            ,HttpSession session)
+    {
+        try {
+            String path = session.getServletContext().getRealPath("/template/img");
+            ProductEntity productEntity=productRepository.findById(id);
+            JSONObject object=new JSONObject(productEntity.getContent());
+            JSONArray array=object.getJSONArray("img");
+            for (CommonsMultipartFile file : files) {
+                String filename = java.time.LocalDateTime.now().toString().replaceAll("\\.", ":").replaceAll(":", "-") + file.getOriginalFilename();
+
+                System.out.println(path + " " + filename);
+                try {
+                    byte barr[] = file.getBytes();
+
+                    BufferedOutputStream bout = new BufferedOutputStream(
+                            new FileOutputStream(path + "/" + filename));
+                    bout.write(barr);
+                    bout.flush();
+                    bout.close();
+                    ImageEntity imageEntity = new ImageEntity();
+                    imageEntity.setLink("/template/img/" + filename);
+                    imageRepository.save(imageEntity);
+                    array.put("/template/img/" + filename);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return "redirect:/admin/editProduct/"+id+"?error";
+                }
+            }
+            productEntity.setContent(object.put("img",array).toString());
+            productRepository.save(productEntity);
+            return "redirect:/admin/editProduct/"+id+"?success";
+        }
+        catch (Exception e){
+            return "redirect:/admin/editProduct/"+id+"?error";
+        }
     }
 }

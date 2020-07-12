@@ -24,7 +24,7 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-12">
-                            <form id="formSubmit">
+                            <form action="/admin/uploadImgFromEdit" method="post" id="formSubmit" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Brand</label>
                                     <div class="col-sm-9">
@@ -32,6 +32,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                <input id="id" name="id" hidden>
                                 <br/>
                                 <br/>
                                 <div class="form-group">
@@ -102,6 +103,17 @@
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="img" name="anh" value="${model.anh}"/>
                                         <div class="row myanhnho" id="list_img">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right">Thêm mới Hình ảnh</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" multiple="multiple" class="form-control" id="images" name="images"/>
+                                        <div class="row myanhnho" id="list_img_new">
 
                                         </div>
                                     </div>

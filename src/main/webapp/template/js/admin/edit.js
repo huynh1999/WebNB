@@ -59,6 +59,7 @@ function loadDefaultCategory(data) {
     });
     $('b').css('margin-top','0px');
 }
+//xử lí ảnh
 function doWithImg()
 {
     var listImgElement=$("#list_img");
@@ -74,6 +75,24 @@ function doWithImg()
             $(this).parent("div").remove();
         })
     });
+}
+function loadInputImage(input)
+{
+    if (input.files) {
+        var filesAmount = input.files.length;
+        var element=$("#list_img_new");
+        element.html("");
+        for (i = 0; i < filesAmount; i++) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                element.append("<div class=\"anhnhothanhphan\">\n" +
+                    "                          <img src=\""+event.target.result+"\" alt=\"\">\n" +
+                    "                          </div>")
+            };
+            reader.readAsDataURL(input.files[i]);
+        }
+    }
 }
 function submitButton()
 {
@@ -113,7 +132,12 @@ function submitButton()
             alert("Cập nhật thành công")
         }
         else {alert("Cập nhật thất bại")}
-    })
+    });
+    if($("#images")[0].files.length>0)
+    {
+       $("#id").val(window.location.pathname.split("/")[3]);
+       $("#formSubmit").submit();
+    }
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
@@ -129,6 +153,9 @@ async function doWork() {
     });
     $("#price").on("keyup",function(e){
         $(this).val($(this).val().replace(/\D/g,""))
+    });
+    $("#images").on("change",function () {
+        loadInputImage(this);
     });
     console.log("test");
 }

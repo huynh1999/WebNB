@@ -100,6 +100,9 @@
                             <label class="col-sm-3 control-label no-padding-right">Hình ảnh</label>
                             <div class="col-sm-9">
                                 <input type="file" multiple="multiple" class="form-control" id="images" name="images"/>
+                                <div class="row myanhnho" id="list_img">
+
+                                </div>
                             </div>
                         </div>
                         <input id="sizeText" hidden>

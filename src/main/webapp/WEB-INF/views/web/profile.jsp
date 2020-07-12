@@ -40,6 +40,9 @@
                         <h5><b>Thông tin cá nhân</b> </h5>
                         <form>
                             <div class="input-field">
+                                <input type="text" required="" id="userName" disabled value="<%=SecurityUtils.getPrincipal().getUsername()%>">
+                            </div>
+                            <div class="input-field">
                                 <input type="text" required="" id="nameInfo" value="<%=SecurityUtils.getPrincipal().getName()%>">
                                 <label>Tên</label>
                             </div>
@@ -173,32 +176,8 @@
                     Các sản phẩm đề xuất</h6>
                 <div class="row">
                     <div role="list">
-                        <div class="row" role="list" style="text-align: center;">
-                            <div class="col _1sanpham" role="listitem">
-                                <a href="#"><img alt="sanpham1" class="thugonvua"
-                                        src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b01-0019570/f7e1d4ae-c9b3-0100-d1ac-0016c9eb68f5.jpg?w=440"
-                                        alt=""></a>
-                                <p>100.000 vnd</p>
-                                <!-- mau  -->
+                        <div class="row" id="recommendProduct" role="list" style="text-align: center;">
 
-
-                            </div>
-                            <div class="col _1sanpham" role="listitem">
-                                <a href="#"><img alt="sanpham2" class="thugonvua"
-                                        src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
-                                        alt=""></a>
-                                <p>100.000 vnd</p>
-                                <!-- mau  -->
-
-
-                            </div>
-                            <div class="col _1sanpham" role="listitem">
-                                <a href="#"><img alt="sanpham3" class="thugonvua"
-                                        src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/80f8c358-7a9c-1e00-c2bc-0016a782c0ff.jpg?w=440"
-                                        alt=""></a>
-                                <p>100.000 vnd</p>
-                                <!-- mau  -->
-                            </div>
                         </div>
                     </div>
                 </div>

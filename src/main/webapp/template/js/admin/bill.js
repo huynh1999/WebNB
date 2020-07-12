@@ -7,6 +7,7 @@ async function uploadContent()
     });
     $("#billCode").val(data.billEntity.billName);
     $("#payer").val(data.name);
+    $("#payment").val(data.billEntity.paymentMethod);
     $("#phone").val(data.phone);
     $("#dateBuy").val(data.billEntity.createdDate);
     $("#email").val(data.email);

@@ -55,6 +55,7 @@ public class API {
     String FindCategory(@PathVariable("cate")String cate) throws JsonProcessingException {
         List<ProductEntity>list=categoryRepository.findOneByCategoryName(cate).getListProducts();
         ObjectMapper mapper=new ObjectMapper();
+        list.removeIf(p -> p.getActive() == 0);
         Collections.reverse(list);
         return mapper.writeValueAsString(list);
     }
@@ -215,6 +216,12 @@ public class API {
         re.remove(0);
         ObjectMapper mapper=new ObjectMapper();
         return mapper.writeValueAsString(re);
+    }
+    @GetMapping(value = "/getTopProduct",produces = "application/json;charset=UTF-8")
+    public String GetTopProduct() throws JsonProcessingException {
+        List<ProductEntity>list=productRepository.orderbySold();
+        ObjectMapper mapper=new ObjectMapper();
+        return mapper.writeValueAsString(list);
     }
     @PostMapping(value = "/search",produces = "application/json;charset=UTF-8")
     public String search(@RequestBody JsonNode node) throws JsonProcessingException {

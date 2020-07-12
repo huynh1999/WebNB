@@ -183,6 +183,7 @@ public class AdminApi {
                     statusContent="";
             }
             BillEntity billEntity=billRepository.findById(node.get("id").asLong());
+            if(billEntity.getStatus()>=3)return "error";
             billEntity.setStatus(node.get("status").asInt());
             JSONObject jsonObject=new JSONObject();
             Date date = new Date();
@@ -207,4 +208,5 @@ public class AdminApi {
         Collections.reverse(imageEntities);
         return mapper.writeValueAsString(imageEntities);
     }
+
 }

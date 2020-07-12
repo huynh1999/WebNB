@@ -211,12 +211,19 @@ function SetTotalPrice()
 }
 function CheckOut()
 {
-    $("#checkout").submit(function () {
+    $("#COD").click(function () {
         $("input[name=content]").attr("value",localStorage.getItem("cart_item"));
         localStorage.setItem("tmp",localStorage.getItem("cart_item"));
         localStorage.removeItem("cart_item");
-        return true;
-    })
+        $("#checkout").submit();
+    });
+    $("#Paypal").click(function () {
+        $("input[name=content]").attr("value",localStorage.getItem("cart_item"));
+        localStorage.setItem("tmp",localStorage.getItem("cart_item"));
+        localStorage.removeItem("cart_item");
+        $("#checkout").get(0).setAttribute('action', '/checkout/paypal');
+        $("#checkout").submit();
+    });
 }
 async function doWork() {
     await LoadData();

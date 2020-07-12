@@ -131,57 +131,19 @@
         <br>
         <i class="fa fa-star mystar"></i>
         <h5 class="tieu_de">TOP PRODUCT</h5>
-        <div class="product-slider row">
-            <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
-                        alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
-                <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+        <div class="product-slider row" id="topProduct">
+            <c:forEach var="item" items="${topProduct}">
+                <div class="onepartslide">
+                    <a href="/product/${item.id}"><img alt="sanpham4" class="anhsanpham"
+                                                src="${item.url1}"
+                                                alt=""></a>
+                    <p>${item.name}</p>
+                    <p class="price">${item.price}đ</p>
+                    <div class="shopbasket">
+                        <a href="/product/${item.id}"><i class="fa fa-shopping-basket"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
-                        alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
-                <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
-                </div>
-            </div>
-            <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
-                        alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
-                <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
-                </div>
-            </div>
-            <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/2711de3d-4e22-1c00-56b4-0016a7829674.jpg?w=100&h=140&c=true"
-                        alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
-                <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
-                </div>
-            </div>
-            <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
-                        alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
-                <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
-                </div>
-            </div>
+            </c:forEach>
         </div>
 <script>
     window.onload=function () {

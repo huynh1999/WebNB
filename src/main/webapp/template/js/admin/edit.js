@@ -144,7 +144,7 @@ function submitButton()
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
-    await axios.get("/api/product/"+idproduct).then(re=>{
+    await axios.get("/admin/api/product/"+idproduct).then(re=>{
         loadData(re.data);
     });
     $(".button-donganhnho").click(function () {

@@ -34,6 +34,7 @@ function uploadDataAfterSearch(data)
             "                                                    </td>\n" +
             "                                                </tr>")
     }
+    $("#table").DataTable();
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
@@ -41,7 +42,7 @@ async function doWork() {
         axios.get("/admin/api/category/"+$("select").val()).then(re=>{
             uploadDataAfterSearch(re.data);
         })
-    })
+    });
     console.log("test");
 }
 doWork();

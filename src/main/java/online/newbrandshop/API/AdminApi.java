@@ -53,7 +53,7 @@ public class AdminApi {
     }
     @GetMapping(value = "/getCategory/{id}",produces = "application/json;charset=UTF-8")
     public String GetCategoryProduct(@PathVariable("id")long id) throws JsonProcessingException {
-        ProductEntity entity=productRepository.findById(id);
+        ProductEntity entity=productRepository.adminFindById(id);
         List<CategoryEntity>categoryEntities=entity.getListCategories();
         ObjectMapper mapper=new ObjectMapper();
         return mapper.writeValueAsString(categoryEntities);
@@ -75,6 +75,13 @@ public class AdminApi {
         entity.setActive(node.get("active").asInt());
         productRepository.save(entity);
         return "ok";
+    }
+    @GetMapping(value = "/product/{id}",produces = "application/json;charset=UTF-8")
+    String Data(@PathVariable("id")Long id) throws JsonProcessingException {
+        ProductEntity productEntity=productRepository.adminFindById(id);
+        productEntity.getListCategories();
+        ObjectMapper mapper=new ObjectMapper();
+        return mapper.writeValueAsString(productEntity);
     }
     @GetMapping(value = "/category/{cate}" ,produces = "application/json;charset=UTF-8")
     String FindCategory(@PathVariable("cate")String cate) throws JsonProcessingException {

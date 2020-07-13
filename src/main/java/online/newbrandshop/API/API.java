@@ -193,7 +193,13 @@ public class API {
     @GetMapping(value = "/getRecommendProduct/{idproduct}",produces = "application/json;charset=UTF-8")
     public String GetRecommendProduct(@PathVariable("idproduct")long idproduct) throws JsonProcessingException {
         ProductEntity productEntity=productRepository.findById(idproduct);
-        if(productEntity==null)productEntity=productRepository.findById((long)200);
+        if(productEntity==null){
+            for(int i=150;;i++)
+            {
+                productEntity=productRepository.findById((long)i);
+                if(productEntity!=null)break;
+            }
+        }
         List<CategoryEntity>categoryEntityList=productEntity.getListCategories();
         List<ProductEntity>list=new ArrayList<>();
         for(int i=0;i<categoryEntityList.size();i++)

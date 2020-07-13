@@ -20,6 +20,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 
 	@Query("select p from ProductEntity p where p.active=1 and p.id=:id")
 	ProductEntity findById(@Param("id") Long id);
+	@Query("select p from ProductEntity p where p.id=:id")
+	ProductEntity adminFindById(@Param("id") Long id);
 	@Query("select u from ProductEntity u where u.name LIKE %:keyword%")
 	List<ProductEntity> search(@Param("keyword") String keyword);
 	@Query(nativeQuery = true,value = "select * from  product u order by u.sold desc limit 10")

@@ -72,8 +72,16 @@ public class AdminApi {
         entity.setPrice(node.get("price").asText());
         entity.setName(node.get("name").asText());
         entity.setSize(node.get("size").asText());
+        entity.setActive(node.get("active").asInt());
         productRepository.save(entity);
         return "ok";
+    }
+    @GetMapping(value = "/category/{cate}" ,produces = "application/json;charset=UTF-8")
+    String FindCategory(@PathVariable("cate")String cate) throws JsonProcessingException {
+        List<ProductEntity>list=categoryRepository.findOneByCategoryName(cate).getListProducts();
+        ObjectMapper mapper=new ObjectMapper();
+        Collections.reverse(list);
+        return mapper.writeValueAsString(list);
     }
     @PostMapping(value = "/addType",produces = "application/json;charset=UTF-8")
     public String AddType(@RequestBody JsonNode node)

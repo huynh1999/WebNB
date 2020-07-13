@@ -64,7 +64,7 @@
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th><input type="checkbox" id="checkAll"></th>
+                                                    <th>Id Product</th>
                                                     <th>Tên sản phẩm</th>
                                                     <th>Mô tả</th>
                                                     <th>Thao tác</th>

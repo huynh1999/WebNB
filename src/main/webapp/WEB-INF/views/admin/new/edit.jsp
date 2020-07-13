@@ -26,6 +26,17 @@
                     <div class="col-xs-12">
                             <form action="/admin/uploadImgFromEdit" method="post" id="formSubmit" enctype="multipart/form-data">
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right">Active</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="active" name="active">
+                                            <option value="0">Deactive</option>
+                                            <option value="1">Active</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right">Brand</label>
                                     <div class="col-sm-9">
                                         <select class="form-control" id="categoryCode" name="categoryCode" multiple>

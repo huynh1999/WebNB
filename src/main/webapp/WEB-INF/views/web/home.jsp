@@ -133,53 +133,53 @@
         <h5 class="tieu_de">TOP PRODUCT</h5>
         <div class="product-slider row">
             <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
+                <a href="/product/112"><img alt="sanpham4" class="anhsanpham"
+                        src="/template/img/korea-2020-stadium-away-football-shirt-DPgLP92020-06-01T14-01-38-698.jpg"
                         alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
+                <p>Men's T-Shirt Nike Sportswear</p>
+                <p>919,000₫</p>
                 <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/112"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn3.yame.vn/pimg/ao-thun-nam-y2010-bd-b03-0019572/d901b2c4-22ec-0300-5539-0016c9eb9d40.jpg?w=440"
+                <a href="/product/124"><img alt="sanpham4" class="anhsanpham"
+                        src="/template/img/short-sleeve-training-top-7BHkhF2020-06-01T14-11-08-739.jpg"
                         alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
+                <p>Men's Short-Sleeve Training Top Nike</p>
+                <p>1,119,000₫</p>
                 <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/124"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
+                <a href="/product/135"><img alt="sanpham4" class="anhsanpham"
+                        src="/template/img/stranger-things-club-hoodie-n6WV072020-06-01T14-16-55-583.jpg"
                         alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
+                <p>Men's Club Hoodie Nike x Stranger Things</p>
+                <p>1,579,000₫</p>
                 <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/135"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/ao-khoac-y2010-kaki-e06-0019437/2711de3d-4e22-1c00-56b4-0016a7829674.jpg?w=100&h=140&c=true"
+                <a href="/product/147"><img alt="sanpham4" class="anhsanpham"
+                        src="/template/img/sportswear-swoosh-t-shirt-c94PDZ2020-06-01T14-57-52-381.jpg"
                         alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
+                <p>Men's Swoosh T-Shirt Nike Sportswear</p>
+                <p>919,000₫</p>
                 <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/147"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
             <div class="onepartslide">
-                <a href="/product/266"><img alt="sanpham4" class="anhsanpham"
-                        src="https://cdn2.yame.vn/pimg/so-mi-nam-y2010-tn-g02-0019333/bd607f52-b1cf-0d00-65a6-0016c85210ee.jpg?w=440"
+                <a href="/product/153"><img alt="sanpham4" class="anhsanpham"
+                        src="/template/img/sportswear-t-shirt-JZNtqV2020-06-01T15-00-29-763.jpg"
                         alt=""></a>
-                <p>Ao nike 12212</p>
-                <p>100.000 vnd</p>
+                <p>Men's T-Shirt Nike Sportswear</p>
+                <p>819,000₫</p>
                 <div class="shopbasket">
-                    <a href="/product/266"><i class="fa fa-shopping-basket"></i></a>
+                    <a href="/product/153"><i class="fa fa-shopping-basket"></i></a>
                 </div>
             </div>
         </div>

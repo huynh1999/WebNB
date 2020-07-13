@@ -30,8 +30,8 @@
 	<link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/nhshop.css">
 	<link rel="shortcut icon" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
 	<!-- slick slide -->
-	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
-	<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick-theme.css">
+	<link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
+	<link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick-theme.css">
 </head>
 <body>
 <!-- header -->

@@ -24,6 +24,7 @@ function loadData(data)
     $("#id").val(data.id);
     $("#price").val(data.price);
     $("#shortDescription").val(content.des);
+    $("#active").find("option").eq(data.active).attr("selected","selected");
     //load size
     var size=JSON.parse(data.size);
     $("[contenteditable=true]").each(function () {
@@ -59,6 +60,7 @@ function loadDefaultCategory(data) {
     });
     $('b').css('margin-top','0px');
 }
+//xử lí ảnh
 function doWithImg()
 {
     var listImgElement=$("#list_img");
@@ -75,13 +77,32 @@ function doWithImg()
         })
     });
 }
+function loadInputImage(input)
+{
+    if (input.files) {
+        var filesAmount = input.files.length;
+        var element=$("#list_img_new");
+        element.html("");
+        for (i = 0; i < filesAmount; i++) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                element.append("<div class=\"anhnhothanhphan\">\n" +
+                    "                          <img src=\""+event.target.result+"\" alt=\"\">\n" +
+                    "                          </div>")
+            };
+            reader.readAsDataURL(input.files[i]);
+        }
+    }
+}
 function submitButton()
 {
     var cateCode=[];
-    $('option:selected').each(function(){cateCode.push($(this).val())});
+    $('#categoryCode option:selected').each(function(){cateCode.push($(this).val())});
     var price=$('#price').val();
     var des=$('#shortDescription').val();
     var name=$('#name').val();
+    var active=$("#active option:selected").val();
     var sizeText=JSON.stringify({
         XL:$("#XL").text(),
         '2XL':$("#2XL").text(),
@@ -103,6 +124,7 @@ function submitButton()
     axios.post('/admin/api/updateProduct',{
         id:window.location.pathname.split("/")[3],
         price:price,
+        active:active,
         des:des,
         lsCate: cateCode,
         name:name,
@@ -113,7 +135,12 @@ function submitButton()
             alert("Cập nhật thành công")
         }
         else {alert("Cập nhật thất bại")}
-    })
+    });
+    if($("#images")[0].files.length>0)
+    {
+       $("#id").val(window.location.pathname.split("/")[3]);
+       $("#formSubmit").submit();
+    }
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
@@ -129,6 +156,9 @@ async function doWork() {
     });
     $("#price").on("keyup",function(e){
         $(this).val($(this).val().replace(/\D/g,""))
+    });
+    $("#images").on("change",function () {
+        loadInputImage(this);
     });
     console.log("test");
 }

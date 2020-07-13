@@ -16,3 +16,12 @@ if(window.location.search==="?logoutSuccess")
 {
     localStorage.removeItem("cart_item");
 }
+function fixPriceProduct() {
+    $(".price").each(function () {
+        $(this).text($(this).text().replace(/\D/g,"").replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+    })
+}
+function doWork() {
+    fixPriceProduct();
+};
+doWork();

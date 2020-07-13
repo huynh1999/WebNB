@@ -59,6 +59,7 @@
                         <br/>
                         <div class="form-group">
                             <label class="col-sm-3 control-label no-padding-right">Size</label>
+                            <div class="col-sm-9" style="padding-left:12px">
                             <table style="width: 60%;" class="table table-bordered table-responsive-md table-striped text-center">
                                 <thead>
                                 <tr>
@@ -93,6 +94,7 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                         <br/>
                         <br/>
@@ -100,12 +102,15 @@
                             <label class="col-sm-3 control-label no-padding-right">Hình ảnh</label>
                             <div class="col-sm-9">
                                 <input type="file" multiple="multiple" class="form-control" id="images" name="images"/>
+                                <div class="row myanhnho" id="list_img" style="padding-left: 10px; padding-right: 12px;">
+
+                                </div>
                             </div>
                         </div>
                         <input id="sizeText" hidden>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <input type="submit" class="btn btn-white btn-warning btn-bold" value="Thêm sản phẩm" id="btnAdd"/>
+                                <input type="submit" class="btn btn-warning btn-bold" value="Thêm sản phẩm" id="btnAdd"/>
                             </div>
                         </div>
                     </form>

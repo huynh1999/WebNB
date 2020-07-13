@@ -108,7 +108,8 @@
                                   <div style="text-align: center;">
                                       <div class="inner">
                                       </div>
-                                      <button class="btn btn-warning" type="submit" id="dathang">Hoàn thành</button>
+                                      <button class="btn btn-warning" type="button" id="COD">Ship COD</button>
+                                      <button class="btn btn-warning" type="button" id="Paypal">Ship Paypal</button>
                                   </div>
                               </form>
                           </div>
@@ -172,7 +173,8 @@
                                       <div style="text-align: center;">
                                           <div class="inner">
                                           </div>
-                                          <button class="btn btn-warning" type="submit" id="dathang">Hoàn thành</button>
+                                          <button class="btn btn-warning" type="button" id="COD">Ship COD</button>
+                                          <button class="btn btn-warning" type="button" id="Paypal">Ship Paypal</button>
                                       </div>
                                   </form>
                               </div>

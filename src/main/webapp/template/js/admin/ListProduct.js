@@ -11,10 +11,19 @@ function uploadDataAfterSearch(data)
 {
     var root=$("#bodyList");
     root.html("");
+
     for(var i=0;i<data.length;i++)
     {
+        var statusContent="";
+        if(data[i].active===1)
+        {
+            statusContent="<td style='color: #0be192;font-weight: bold;'>"+data[i].id+"</td>"
+        }
+        else {
+            statusContent="<td style='color: red;font-weight: bold;'>"+data[i].id+"</td>"
+        }
         root.append("<tr>\n" +
-            "                                                    <td><input type=\"checkbox\"></td>\n" +
+            statusContent+
             "                                                    <td>"+data[i].name+"</td>\n" +
             "                                                    <td>"+JSON.parse(data[i].content).des+"</td>\n" +
             "                                                    <td>\n" +
@@ -25,13 +34,15 @@ function uploadDataAfterSearch(data)
             "                                                    </td>\n" +
             "                                                </tr>")
     }
+    $("#table").DataTable();
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
     $("#btn_search").click(function () {
-        axios.get("/api/category/"+$("select").val()).then(re=>{
+        axios.get("/admin/api/category/"+$("select").val()).then(re=>{
             uploadDataAfterSearch(re.data);
         })
-    })
+    });
+    console.log("test");
 }
 doWork();

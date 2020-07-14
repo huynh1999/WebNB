@@ -61,13 +61,13 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered">
+                                        <table id="table" class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th><input type="checkbox" id="checkAll"></th>
-                                                    <th>Tên sản phẩm</th>
-                                                    <th>Mô tả</th>
-                                                    <th>Thao tác</th>
+                                                    <th style="width: 100px">Id Product</th>
+                                                    <th style="width: 250px">Tên sản phẩm</th>
+                                                    <th >Mô tả</th>
+                                                    <th style="width: 60px">Thao tác</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="bodyList">

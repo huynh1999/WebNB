@@ -24,6 +24,7 @@ function loadData(data)
     $("#id").val(data.id);
     $("#price").val(data.price);
     $("#shortDescription").val(content.des);
+    $("#active").find("option").eq(data.active).attr("selected","selected");
     //load size
     var size=JSON.parse(data.size);
     $("[contenteditable=true]").each(function () {
@@ -97,10 +98,11 @@ function loadInputImage(input)
 function submitButton()
 {
     var cateCode=[];
-    $('option:selected').each(function(){cateCode.push($(this).val())});
+    $('#categoryCode option:selected').each(function(){cateCode.push($(this).val())});
     var price=$('#price').val();
     var des=$('#shortDescription').val();
     var name=$('#name').val();
+    var active=$("#active option:selected").val();
     var sizeText=JSON.stringify({
         XL:$("#XL").text(),
         '2XL':$("#2XL").text(),
@@ -122,6 +124,7 @@ function submitButton()
     axios.post('/admin/api/updateProduct',{
         id:window.location.pathname.split("/")[3],
         price:price,
+        active:active,
         des:des,
         lsCate: cateCode,
         name:name,
@@ -141,7 +144,7 @@ function submitButton()
 }
 async function doWork() {
     await axios.get("/admin/api/getCategory").then(re=>{uploadCategory(re.data.split("|"))});
-    await axios.get("/api/product/"+idproduct).then(re=>{
+    await axios.get("/admin/api/product/"+idproduct).then(re=>{
         loadData(re.data);
     });
     $(".button-donganhnho").click(function () {

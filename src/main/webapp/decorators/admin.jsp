@@ -22,6 +22,8 @@
     <link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/edit.css">
     <script type="text/javascript" src="/template/js/common/bootstrap-multiselect.js"></script>
     <link rel="stylesheet" href="/template/css/bootstrap-multiselect.css" type="text/css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" type="text/css"/>
     <dec:head/>
 </head>
 

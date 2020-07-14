@@ -35,4 +35,8 @@
    <mvc:annotation-driven />
    <mvc:resources mapping="/template/**"
                   location="/template/" />
+   <mvc:resources mapping="/sitemap.xml"
+                  location="/template/sitemap.xml" />
+   <mvc:resources mapping="/robots.txt"
+                  location="/template/robots.txt" />
 </beans>

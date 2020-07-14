@@ -368,8 +368,8 @@ public class HomeController {
                         "paypal",
                         "sale",
                         "payment description",
-                        "http://localhost:8080/checkout/paypal/cancel",
-                        "http://localhost:8080/checkout/paypal/success");
+                        "https://newbrandshop.online/checkout/paypal/cancel",
+                        "https://newbrandshop.online/checkout/paypal/success");
                 request.getSession().setAttribute("bill", billEntity);
                 for (Links links : payment.getLinks()) {
                     if (links.getRel().equals("approval_url")) {

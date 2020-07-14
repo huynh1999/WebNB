@@ -146,19 +146,19 @@
 
                                   <form action="${pageContext.request.contextPath}/checkout" id="checkout" method="post" accept-charset="utf-8">
                                       <div class="input-field">
-                                          <input type="text" required="" name="name" value="<%=SecurityUtils.getPrincipal().getName()%>">
+                                          <input type="text" required name="name" value="<%=SecurityUtils.getPrincipal().getName()%>">
                                           <label>Tên</label>
                                       </div>
                                       <div class="input-field">
-                                          <input type="text" required="" name="email" value="<%=SecurityUtils.getPrincipal().getEmail()%>">
+                                          <input type="text" required name="email" value="<%=SecurityUtils.getPrincipal().getEmail()%>">
                                           <label>Email</label>
                                       </div>
                                       <div class="input-field">
-                                          <input type="text" required="" name="phone" value="<%=SecurityUtils.getPrincipal().getPhonenumber()%>">
+                                          <input type="text" required name="phone" value="<%=SecurityUtils.getPrincipal().getPhonenumber()%>">
                                           <label>Số điện thoại</label>
                                       </div>
                                       <div class="input-field">
-                                          <input type="text" required=""  name="address" value="<%=SecurityUtils.getPrincipal().getAddress()%>">
+                                          <input type="text" required  name="address" value="<%=SecurityUtils.getPrincipal().getAddress()%>">
                                           <label>Địa chỉ nhận hàng</label>
                                       </div>
                                       <input name="content" hidden value="">

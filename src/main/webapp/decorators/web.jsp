@@ -20,8 +20,10 @@
 		}
 	</script>
 	<meta charset="utf-8">
+	<meta name="description"
+		  content="Newbrandshop.online chuyên buôn bán các loại áo quần hàng hiệu, thời trang, mẫu mã đa dạng, giá cả hợp lí bằng nhiều hình thức. Khách hàng có thể đến trực tiếp cửa hàng để chọn lựa và mua sản phẩm. Ngoài ra khách hàng củng có thể mua bằng hình thức online vô cùng tiện lợi.">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
 	<meta name="author" content="">
 	<title><dec:title /></title>
 	<link href="<c:url value='/template/css/bootstrap.min.css' />"
@@ -69,7 +71,7 @@
 <div class="fb-customerchat"
 	 attribution=setup_tool
 	 page_id="106383004443658"
-	 theme_color="#ffc300"
+	 theme_color="#E12942"
 	 logged_in_greeting="Chúng tôi có thể giúp gì cho bạn?"
 	 logged_out_greeting="Chúng tôi có thể giúp gì cho bạn?">
 </div>

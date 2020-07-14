@@ -49,7 +49,7 @@ else
 };
 function loadLine(status) {
     var circle=$(".circle");
-    for (var i=status+1;i<3;i++)
+    for (var i=status+1;i<=3;i++)
     {
         circle.eq(i).css("background-color","white");
     }

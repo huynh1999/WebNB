@@ -71,12 +71,12 @@
             <div id="line">
                 <div class="circle" id="circle0" style="left:0%;">
                     <div class="popupSpan">
-                        Đặt hàng thành công
+                        NBShop đã tiếp nhận
                     </div>
                 </div>
                 <div class="circle" id="circle1" style="left:33%;">
                     <div class="popupSpan">
-                        NBShop đã tiếp nhận
+                        NBShop đã xac nhận
                     </div>
                 </div>
                 <div class="circle" id="circle2" style="left:66%;">

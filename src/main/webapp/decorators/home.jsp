@@ -21,7 +21,6 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="testt quanbahtf">
     <meta name="author" content="">
     <title><dec:title /></title>
     <link href="<c:url value='/template/css/bootstrap.min.css' />"
@@ -30,8 +29,10 @@
     <link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/css/nhshop.css">
     <link rel="shortcut icon" href=" ${pageContext.request.contextPath}/template/logo/icon.ico" type="image/x-icon">
     <!-- slick slide -->
-    <link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
-
+    <link rel="preload" as="font" href="/template/slick/fonts/fontawesome-webfont.woff2?v=4.7.0" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/template/slick/fonts/slick.woff" type="font/woff2" crossorigin="anonymous">
+    <link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick.css">
+    <link onerror="errorHandler()" rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick-theme.css">
 </head>
 <body>
 <!-- header -->
@@ -425,7 +426,6 @@
 <script src="<c:url value='/template/js/common/bootstrap.min.js' />" onerror="errorHandler()"></script>
 <script src="${pageContext.request.contextPath}/template/js/common/popper.js" onerror="errorHandler()"></script>
 <script src="/template/js/page/web.js" onerror="errorHandler()"></script>
-<link rel="stylesheet" href=" ${pageContext.request.contextPath}/template/slick/slick-theme.css">
 <script>
     $('.main-slider').slick({
         slidesToShow: 1,

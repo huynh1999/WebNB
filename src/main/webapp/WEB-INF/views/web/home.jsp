@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords"
         content="Quần áo hàng hiệu,Shop quần áo TPHCM,Quần áo New Brand,Shop quần áo online,Quần áo cho nam/nữ">
-    <meta name="Description"
+    <meta name="description"
         content="Newbrandshop.online chuyên buôn bán các loại áo quần hàng hiệu, thời trang, mẫu mã đa dạng, giá cả hợp lí bằng nhiều hình thức. Khách hàng có thể đến trực tiếp cửa hàng để chọn lựa và mua sản phẩm. Ngoài ra khách hàng củng có thể mua bằng hình thức online vô cùng tiện lợi.">
     <!-- Bootstrap CSS -->
     <!-- css  -->

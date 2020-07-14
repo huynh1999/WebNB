@@ -360,7 +360,7 @@ public class HomeController {
             payerEntity.setEmail(email);
             payerEntity.setAddress(address);
             payerEntity.setPhone(phone);
-            billEntity.setPayerEntity(payerEntity);
+
             try {
                 Payment payment = paypalService.createPayment(
                         totalMoney.doubleValue() / 22000,
@@ -371,6 +371,7 @@ public class HomeController {
                         "https://newbrandshop.online/checkout/paypal/cancel",
                         "https://newbrandshop.online/checkout/paypal/success");
                 request.getSession().setAttribute("bill", billEntity);
+                request.getSession().setAttribute("payer", payerEntity);
                 for (Links links : payment.getLinks()) {
                     if (links.getRel().equals("approval_url")) {
                         return "redirect:" + links.getHref();
@@ -394,6 +395,9 @@ public class HomeController {
     @RequestMapping("/checkout/paypal/success")
     public String successPay(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, HttpServletRequest request) {
         BillEntity billEntity = (BillEntity) request.getSession().getAttribute("bill");
+        PayerEntity payerEntity=(PayerEntity)request.getSession().getAttribute("payer");
+        billEntity.setPayerEntity(payerEntity);
+        payerEntity.setBillEntity(billEntity);
         try {
             Payment payment = paypalService.executePayment(paymentId, payerId);
             if (payment.getState().equals("approved")) {

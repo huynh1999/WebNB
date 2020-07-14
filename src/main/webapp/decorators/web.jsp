@@ -385,7 +385,7 @@
 <!-- footer  -->
         <div class="row footer" style="margin-left: 0px; margin-right: 0px; padding: 0px">
             <div class="col" style="margin: auto;">
-                <h4 style="color: red;margin-top: 8px;">About NBShop</h4>
+                <h4 style="color: red; margin-top: 8px; font-weight: bold;">About NBShop</h4>
                 <ul style="list-style: none;">
                     <li><a href="/hethongcuahang" style="color: aliceblue; text-decoration: none;"><h5>Hệ thống cửa hàng</h5></a></li>
                     <li><a href="/thongtinshop" style="color: aliceblue; text-decoration: none;"><h5>Thông tin</h5></a></li>
@@ -393,7 +393,7 @@
                 </ul>
             </div>
             <div class="col" style="margin: auto;">
-                <h4 style="color: red;margin-top: 8px;">Get help</h4>
+                <h4 style="color: red; margin-top: 8px; font-weight: bold;">Get help</h4>
                 <ul style="list-style: none;">
                     <li><a href="${pageContext.request.contextPath}/cart" style="color: aliceblue; text-decoration: none;"><h5>Giỏ hàng</h5></a></li>
                     <li><a href="/help" style="color: aliceblue; text-decoration: none;"><h5>Chính sách</h5></a></li>

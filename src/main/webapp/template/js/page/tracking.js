@@ -37,7 +37,7 @@ if(listData!=="error")
             "                            <td>"+details[i].content+"</td>\n" +
             "                        </tr>")
     }
-    loadLine(status);
+    loadLine(parseInt(status));
     root.innerHTML=content;
 }
 else

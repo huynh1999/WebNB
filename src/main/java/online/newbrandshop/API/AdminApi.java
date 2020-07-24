@@ -61,7 +61,7 @@ public class AdminApi {
     @PostMapping("/updateProduct")
     public String UpdateProduct(@RequestBody JsonNode node)
     {
-        ProductEntity entity=productRepository.findById(node.get("id").asLong());
+        ProductEntity entity=productRepository.adminFindById(node.get("id").asLong());
         List<CategoryEntity>categoryEntityList=new ArrayList<>();
         for (JsonNode node1:node.get("lsCate")
              ) {
@@ -223,5 +223,9 @@ public class AdminApi {
         Collections.reverse(imageEntities);
         return mapper.writeValueAsString(imageEntities);
     }
-
+    @GetMapping(value = "/dataBillMonth/{month}/{year}")
+    public String data(@PathVariable("month")int month,@PathVariable("year")int year)
+    {
+        return billRepository.doChartjs(month,year);
+    }
 }

@@ -29,7 +29,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api")
 public class API {

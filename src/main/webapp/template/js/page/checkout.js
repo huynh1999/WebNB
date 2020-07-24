@@ -1,6 +1,6 @@
 if(window.location.search==="?error")
 {
-    if(localStorage.getItem("tmp")!==null)
+    if(localStorage.getItem("tmp")!==null&&localStorage.getItem("tmp")!==undefined)
     {
         localStorage.setItem("cart_item",localStorage.getItem("tmp"));
         localStorage.removeItem("tmp");

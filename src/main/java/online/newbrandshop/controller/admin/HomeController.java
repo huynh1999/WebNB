@@ -229,4 +229,10 @@ public class HomeController {
             return "redirect:/admin/editProduct/"+id+"?error";
         }
     }
+    @RequestMapping("/totalMoneyMonth")
+    public ModelAndView chart()
+    {
+        ModelAndView mav=new ModelAndView("admin/chartJS");
+        return mav;
+    }
 }
